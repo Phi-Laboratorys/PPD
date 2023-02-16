@@ -14,7 +14,7 @@ Die Auswertungen dienen zur **Hilfe** und sollen nicht die Eigenleistung erleich
 | Nr | Gruppenmitglieder  <img width=400/>                                                 | <img width=20/> Jahr <img width=20/>    |
 |:--:|:------------------------------------------------------------------------------------|:---------:|
 | 1  | [Manuel Lippert](https://github.com/ManeLippert), Paul Schwanitz                    |   2021    |
-| 2  | Anna-Maria Pleyer, Dominik Müller, (David Stadelmann bei FRET)                      |   2021    |
+| 2  | Dominik Müller, Stefan Barthelmann                                                  |   2021    |
 | 3  | Leonhard Schatt, Matteo Kumar                                                       |   2021    |
 
 ## [Fortgeschrittenes Praktikum B2](https://github.com/Phi-Laboratorys/PPB2)
