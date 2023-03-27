@@ -21,11 +21,11 @@
 \usepackage{nicefrac}
 \usepackage{fancyvrb}
 \usepackage{amsmath,amssymb,amstext}
-\usepackage{siunitx}
+%\usepackage{siunitx}
 \usepackage{url}
-\usepackage{natbib}
+\usepackage[numbers]{natbib}
 \usepackage{microtype}
-\usepackage[format=plain]{caption}
+%\usepackage[format=plain]{caption}
 \usepackage{physics}
 \usepackage{titleref} 
 
@@ -40,6 +40,7 @@
 \usepackage{tikz} % Zeichnungen
 \usepackage{pdfpages} % Import von pdfs (Protokolle)
 \usepackage{hyperref} % Verlinkungen im Dokument
+\usepackage[format=hang]{caption}
 
 % Abschnittseinrückung und -abstand
 % Die folgenden Zeilen sollen möglichst nicht verändert werden
@@ -59,7 +60,6 @@
 %\sc und \bc veraltet. Daher: (20.09.2018)
 \DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
 \DeclareOldFontCommand{\bf}{\normalfont\scshape}{\textbf}
-
 % Verschiedenes
 \pagestyle{headings}          % Der Seitenstil sollte möglichst nicht verändert werden
 \graphicspath{{./Bilder/}}    % Der Pfad für die Abbildungen Abbildungen wird gesetzt
