@@ -21,7 +21,7 @@
 \usepackage{nicefrac}
 \usepackage{fancyvrb}
 \usepackage{amsmath,amssymb,amstext}
-%\usepackage{siunitx}
+\usepackage{siunitx}
 \usepackage{url}
 \usepackage[numbers]{natbib}
 \usepackage{microtype}
@@ -41,6 +41,10 @@
 \usepackage{pdfpages} % Import von pdfs (Protokolle)
 \usepackage{hyperref} % Verlinkungen im Dokument
 \usepackage[format=hang]{caption}
+\sisetup{
+    per-mode=fraction,
+    fraction-function=\tfrac
+}
 
 % Abschnittseinrückung und -abstand
 % Die folgenden Zeilen sollen möglichst nicht verändert werden
