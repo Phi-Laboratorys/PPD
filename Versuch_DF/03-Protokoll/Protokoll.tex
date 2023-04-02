@@ -36,8 +36,8 @@ Beim Spincoating wird die verdünnten Konzentrationen aus Kapitel \ref{sub:verdu
 
 \begin{center}
 	\captionsetup{type=table}	
-	\begin{tabular}{c | c | c c | l}
-		$c_0$ in \si{\milli\gram\per\milli\litre} & $V_0$ in \si{\micro\litre}  & $V_S$ in \si{\micro\litre} & $V_{CB}$ in \si{\micro\litre} & Substrat \\[0,1cm]
+	\begin{tabular}{r | r | r r | l}
+		$c_0$/\si{\milli\gram\per\milli\litre} & $V_0$/\si{\micro\litre}  & $V_S$/\si{\micro\litre} & $V_{CB}$/\si{\micro\litre} & Substrat \\[0,1cm]
 		\hline
 		300  &  $933 - V_{S;250-25} = 373$  &  373  &    0  &   12 \\
 		250  &  					  240   &  200  &   40  &   13 \\
@@ -90,7 +90,7 @@ und später in csv Dateien umgewandelt und umbenannt nach dem Schema:
 	\item \textit{Transmission\_(Konzentration)mg\_ml\_(Messungsnummer).csv}
 \end{itemize}
 
-Das Programm \textit{NanoCalc} fittet auch sofort für die gemessenen Werte die Dicke $d$ mit einem Parameter names Fitness, was eine Güte für den Fit ist. Die jeweiligen werte wurden in:
+Das Programm \textit{NanoCalc} fittet auch sofort für die gemessenen Werte die Dicke $d$ in \si{\nano\metre} mit einem Parameter names Fitness, was eine Güte für den Fit ist. Die jeweiligen werte wurden in:
 \begin{itemize}
 	\item \textit{Reflexion\_(Konzentration)mg\_ml\_Fit.csv}
 	\item \textit{Transmission\_(Konzentration)mg\_ml\_Fit.csv}
@@ -101,7 +101,7 @@ Weiterhin wurden die Integrationszeit, boxcar und die Anzahl der Messung bevor g
 \begin{center}
 	\captionsetup{type=table}
 	\begin{tabular}{l | c c c}
-		             & Integrationszeit in \si{\milli\sec} & boxcar in pixel & Sample \\
+		             & Integrationszeit/\si{\milli\sec} & boxcar/pixel & Sample \\
 		\hline
 		Reflexion    & 25								   & 1				 & 150    \\
 		Transmission & 7								   & 1 				 & 600    
