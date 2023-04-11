@@ -5,7 +5,7 @@ import pandas as pd
 import os
 from scipy.optimize import curve_fit
 
-data_folder = "../Daten"
+data_folder = "../Daten/Konzentration"
 types = ["Reflexion", "Transmission"]
 
 pic_folder = "../Bilder/Auswertung/41"
