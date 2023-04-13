@@ -11,7 +11,7 @@
 
 
 % Packages
-\documentclass[paper=a4,bibliography=totoc,BCOR=10mm,twoside,numbers=noenddot,fontsize=11pt]{scrreprt}
+\documentclass[paper=a4,bibliography=totoc,BCOR=10mm,twoside,numbers=noenddot,fontsize=11pt, headsepline]{scrreprt}
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc} %ä, ö, ü inbegriffen
@@ -21,12 +21,12 @@
 \usepackage{nicefrac}
 \usepackage{fancyvrb}
 \usepackage{amsmath,amssymb,amstext}
-\usepackage{siunitx}
+\usepackage{siunitx}[=v2]
 \usepackage{url}
-\usepackage[numbers]{natbib}
+\usepackage[numbers, super]{natbib}
 \usepackage{microtype}
 %\usepackage[format=plain]{caption}
-\usepackage{physics}
+%\usepackage{physics}
 \usepackage{titleref} 
 
 % Zusätzliche Packages
@@ -46,6 +46,7 @@
     fraction-function=\tfrac
 }
 \usepackage{booktabs}
+\usepackage{lmodern}
 
 % Abschnittseinrückung und -abstand
 % Die folgenden Zeilen sollen möglichst nicht verändert werden

@@ -5,15 +5,15 @@ import pandas as pd
 import os
 from scipy.optimize import curve_fit
 
-data_folder = "../Daten/Konzentration"
+data_folder = "../Daten/Rotation"
 types = ["Reflexion", "Transmission"]
 
-pic_folder = "../Bilder/Auswertung/41"
+pic_folder = "../Bilder/Auswertung/42"
 
 plot.parameters(True, 30, (16,8), 100, colorblind = False)
 
 '''
-# Verlauf ===========================================================================================================================================
+# Verlauf =========================================================================================
 
 x_max, x_min = [800, 480],   [400, 340]   
 y_max, y_min = [0.085, 0.98], [0.035, 0.88]
@@ -65,21 +65,23 @@ for t, ymax, ymin, xmax, xmin in zip(types, y_max, y_min, x_max, x_min):
 #'''
 
 #'''
-# Fitguete ==========================================================================================================================================
+# Fit =============================================================================================
 
 # define the true objective function
-def linear(x, a, b):
-    return a * x + b
+def schubert(x, a):
+    const = 47.654
+    return (a * const)/(x**(1/2))
 
-def hyperbel(x, a, b):
-    return a/(x**(1/8)) + b 
+fig, (ax1, ax2) = plt.subplots(2,1, figsize = (16, 16), sharex=True)
+axes = [ax1, ax2]
 
-x_max, x_min = [40, 60],   [0, 0]   
-y_max, y_min = [0.02, 0.45], [0.004, 0.05]
-
-for t, ymax, ymin, xmax, xmin in zip(types, y_max, y_min, x_max, x_min):
+for t, ax in zip(types, axes):
     directories = os.listdir(data_folder + "/" + t)
-    directories = sorted(directories, key=lambda x: int(x[:-5]))[::-1]
+    directories = sorted(directories, key=lambda x: int(x[:-3]))
+    
+    print(directories)
+    
+    rpm = [int(x.replace("rpm", "")) for x in directories]
     
     thickness_mean, thickness_std, homogen, fitness_mean = [], [], [], []
     
@@ -97,62 +99,47 @@ for t, ymax, ymin, xmax, xmin in zip(types, y_max, y_min, x_max, x_min):
             
             fitness_mean.append(df[1].mean().round(6))      
     
-    df_stat = pd.DataFrame(list(zip(thickness_mean, thickness_std, homogen, fitness_mean)))
+    df_stat = pd.DataFrame(list(zip(rpm, thickness_mean, thickness_std, homogen)))
     
+    
+    print(df_stat)
+
     yscale = 100
-    x1, x2, y = df_stat[0], df_stat[1], df_stat[3]*yscale
+    x, y = df_stat[0], df_stat[1]
     
-    if t == types[0]:
-        objective = linear
-        label_fit1 = r"$\langle \chi \rangle = a \, \langle d \rangle  + b$"
-        label_fit2 = r"$\langle \chi \rangle = a \, std(d)  + b$"
+    objective = schubert
+    label_fit = r"$\langle d \rangle = A \cdot C \cdot \omega^{-1/2}$"
         
-    if t == types[1]:
-        objective = hyperbel
-        label_fit1 = r"$\langle \chi \rangle = a/\langle d \rangle^2 + b$"
-        label_fit2 = r"$\langle \chi \rangle = a/std(d)^2 + b$"
-        
-    popt1, var1 = curve_fit(objective, x1, y)
-    popt2, var2 = curve_fit(objective, x2, y)
+    popt, var = curve_fit(objective, x, y)
     
-    a1, b1 = popt1
-    a2, b2 = popt2
-    
-    print(a1, b1)
-    print(a2, b2)
+    a = popt
+    print(a)
      
-    xline1 = np.arange(0, 4000, 1)
-    xline2 = np.arange(xmin, xmax, 1)
+    xline = np.arange(0, 10000, 1)
     
-    fig, (ax1, ax2) = plt.subplots(1,2, figsize = (16, 7), sharey=True)
-    axes = [ax1, ax2]
+    ax.plot(x, y, "o", label = "Messwerte", color = "red")
+    ax.plot(xline, objective(xline, a), label = label_fit, linewidth = 3, color = "orange")
+
+    ax.set_ylabel(r"$\langle d \rangle$ in nm")
+    ax.yaxis.set_label_coords(-0.1,0.5)
     
-    ax1.plot(x1, y, "o", label = "Messwerte", color = "red")
-    ax1.plot(xline1, objective(xline1, a1 , b1), label = label_fit1, linewidth = 3, color = "orange")
+    ax.set_xlim(0, 10000)
+    ax.set_ylim(0,  5000)
     
-    ax1.set_xlabel(r"$\langle d \rangle$ in nm")
-    ax1.set_ylabel(r"$\langle \chi \rangle \cdot 10 ^2$" )
-    ax1.yaxis.set_label_coords(-0.15,0.5)
     
-    ax1.set_xlim(0, 4000)
-    ax1.set_ylim(ymin*yscale, ymax*yscale)
+ax1.text(1.01, 0.94, r'\bf{(a)}', transform=ax1.transAxes)
+ax2.text(1.01, 0.94, r'\bf{(b)}', transform=ax2.transAxes)
+
+ax2.set_xlabel(r"$\omega$ in rpm" )
+plt.subplots_adjust(hspace=0.1)
     
-    ax2.plot(x2, y, "o", color = "red")
-    ax2.plot(xline2, objective(xline2, a2 , b2), label = label_fit2, linewidth = 3)
-    
-    ax2.set_xlabel(r"$std(d)$ in nm")
-    
-    ax2.set_xlim(xmin, xmax)
-    
-    handles_labels = [ax.get_legend_handles_labels() for ax in axes]
-    handles, labels = [sum(lol, []) for lol in zip(*handles_labels)]
-    
-    fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, 1.03), ncol=3, frameon=False, columnspacing=1, handlelength=1)
-    
-    plt.subplots_adjust(wspace=0.1)
-    
-    #plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.16), ncol=8, frameon=False, columnspacing=0.5, handlelength=0.5)
-    plt.savefig(pic_folder + "/" + t + "-Fitguete.pdf", bbox_inches='tight')
-    #plt.show()
-    plt.clf()
+handles_labels = [ax1.get_legend_handles_labels()]
+handles, labels = [sum(lol, []) for lol in zip(*handles_labels)]
+
+fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, 0.95), ncol=3, frameon=False, columnspacing=1, handlelength=1)
+
+plt.savefig(pic_folder + "/" + "Rotation.pdf", bbox_inches='tight')
+
+#plt.show()
+
 #'''

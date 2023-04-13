@@ -50,7 +50,7 @@ for t, ymax, ymin, xmax, xmin in zip(types, y_max, y_min, x_max, x_min):
         wavelength_mean = np.mean(wavelength, 0)
         amplitude_mean  = np.mean(amplitude, 0)
         
-        plt.plot(wavelength_mean, amplitude_mean, linewidth = 4, label = d.replace("mg_ml", r" $\frac{\mathrm{mg}}{\mathrm{mL}}$"))
+        plt.plot(wavelength_mean, amplitude_mean, linewidth = 4, label = d.replace("mg_ml", r" $\frac{\mathrm{mg}}{\mathrm{ml}}$"))
     
     plt.xlim(xmin, xmax)
     plt.ylim(ymin, ymax)
@@ -105,12 +105,12 @@ for t, ymax, ymin, xmax, xmin in zip(types, y_max, y_min, x_max, x_min):
     if t == types[0]:
         objective = linear
         label_fit1 = r"$\langle \chi \rangle = a \, \langle d \rangle  + b$"
-        label_fit2 = r"$\langle \chi \rangle = a \, std(d)  + b$"
+        label_fit2 = r"$\langle \chi \rangle = a \, d^*  + b$"
         
     if t == types[1]:
         objective = hyperbel
         label_fit1 = r"$\langle \chi \rangle = a/\langle d \rangle^2 + b$"
-        label_fit2 = r"$\langle \chi \rangle = a/std(d)^2 + b$"
+        label_fit2 = r"$\langle \chi \rangle = a/(d^*)^2 + b$"
         
     popt1, var1 = curve_fit(objective, x1, y)
     popt2, var2 = curve_fit(objective, x2, y)
