@@ -84,5 +84,5 @@ plt.ylabel("d in nm")
     
 plt.legend(loc='upper center', bbox_to_anchor=(0.5, 1.16), ncol=8, frameon=False, columnspacing=0.5, handlelength=0.5)
 
-plt.savefig(pic_folder + "/Schichtdicken-Fit.pdf", bbox_inches='tight')
+#plt.savefig(pic_folder + "/Schichtdicken-Fit.pdf", bbox_inches='tight')
 plt.show()
