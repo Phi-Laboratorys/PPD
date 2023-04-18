@@ -59,31 +59,51 @@ Da $c_0$ die x-Koordinate des Schnittpunktes ist, kann die volgendermaßen berec
 \paragraph*{Nach Mark}
 Die root-mean-square end-to-end distance wird im folgenden, ausgehend vom charakteristischen Flory Verhältnis von $C_\infty = 9.5$ berechnet. Heirzu wird folgende Formel benutzt:
 \begin{gather}
-	R_{rms} = \sqrt{C_\infty n l^2}
+	R_{rms,M} = \sqrt{C_\infty n l^2}
 \end{gather}
-Wobei $l$ die Länge im Polymerrückrat ist (Annahme: $l = 1.54$ Anström) und n die Anzahl der Bindungen im Polymerrückrat ist. (??)
+Wobei $l$ die Länge im Polymerrückrat ist (Annahme: $l = 1.54$ Anström) und n die Anzahl der Bindungen im Polymerrückrat ist. n wird mittels division der Masse der Polymerkette (ca. 35 000 u) durch die Masse des einzelnen Styrolmonomers (104,15 g/mol) ermittelt. Somit gilt: $ n = 336 $.
+Durch einsdetzen in die Formel erhält mal:
+\begin{gather}
+	R_{rms,M} = 87,0 \cdot 10^{-10} \, \text{m}
+\end{gather}
 
 \paragraph*{Nach Daum}
 Nun wird root-mean-square end-to-end distance mittels folgender Formel berechnet:
 \begin{gather}
-	R_{rms} = 2,84 \cdot 10^{-8} \cdot \sqrt[3]{\frac{M}{c_0}}
+	R_{rms,D} = 2,84 \cdot 10^{-8} \cdot \sqrt[3]{\frac{M}{c_0}}
 \end{gather}
-Wobei $M$ das Molekulargewicht des Polymers ist und $c_0$ die kritische Überlapp-Konzentration.
+Wobei $M$ das Molekulargewicht des Polymers ist und $c_0$ die kritische Überlapp-Konzentration in g/cm$^3$.
+Einsetzen liefert hier wieder folgendes Ergebniss:
+\begin{gather}
+	R_{rms,D} = 1,71 \cdot 10^{-6} /, \text{m}
+\end{gather}
+Die Autoren merken an, dass diese Gleichung unter der Annahme gilt, dass sich die Polymerketten bei setigender Konzentratin mit ihren Nachbarn verhedern. Dies wirkt verkleinernd aucf die root-mean-square end-to-end distance aus, was womöglich erklärt, warum sie hier 2 Größenordnungen kleiner ist als mit der berechnung nach Mark.
 
 \newpage
 \subsection{Vergleich der Messdaten mit den bekannten Polymer Modellen}
 
 Die Gleichungen der Überlapp-Konzenrationen für Übergang von verdünnt zu semiverdünnt $C^*$ und semiverdünnt zu konzentriert $C^{**}$ wurden aus dem Paper "Overlap Concentration of Macromolecules in Solution"von Qicong Ying und Benjamin Chu aus 1987 entnommen.
 
-Wobei bei den Formeln aus dem Paper M die molekulare Masse des Polymers, $N_A$ die Avogadrokonstante, $h_0$ die root-mean-square end-to-end distance, $\rho$ die Persistenzlänge und L die Konturlänge, d der Konturdurchmesser und $[\eta]^{**}$ die intrinsische Viskosität ist.
+Wobei bei den Formeln aus dem Paper M die molekulare Masse des Polymers, $N_A$ die Avogadrokonstante, $h_0$ die root-mean-square end-to-end distance ($R_{rms,M} = 87,0 \cdot 10^{-10}$ m), $\rho$ die Persistenzlänge und L die Konturlänge ist.
+Für Polystyrol gilt $\rho = 11 \cdot 10^{-10}$ m \citep*{psPers}.
 
 \begin{figure}[h]
 	\includegraphics[width=0.95\textwidth]{Bilder/Auswertung/43/YingT1.png}
 	\caption[short]{Gleichungen für $C^*$ aus Ying et al. (1987).}
 \end{figure}
 
+\begin{table}[h]
+	\centering
+	\begin{tabular}{l|c}
+		Modell & $C^*$ in mg/ml\\ \hline
+		random coils & 706 \\
+		wormlike & 215\\
+		rods & 964 \\
+	\end{tabular}
+\end{table}
 
-\begin{figure}[h]
-	\includegraphics[width=0.95\textwidth]{Bilder/Auswertung/43/YingT2.png}
-	\caption[short]{Gleichungen für $C^{**}$ aus Ying et al. (1987).}
-\end{figure}
+
+% \begin{figure}[h]
+% 	\includegraphics[width=0.95\textwidth]{Bilder/Auswertung/43/YingT2.png}
+% 	\caption[short]{Gleichungen für $C^{**}$ aus Ying et al. (1987).}
+% \end{figure}
