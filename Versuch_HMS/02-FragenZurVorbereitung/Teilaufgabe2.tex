@@ -1,3 +1,25 @@
 % Teilaufgabe X
 
 \section{Vergleich thermisches Rauschen und Quantenrauschen}
+
+Im Folgenden soll die Leistung (in dBm) de thermischen Rauschens und des Quantenrauschens für folgenden Fall berechnet werden:
+
+$P = 0,1$ mW, $T = 293$ K, $R_D = 50\, \Omega$, $\beta_D = 0,3$ und $\Delta \nu = 10$ kHz.
+
+Für die Leisungsschwankung, welch durch Quantenrauschen verursacht wird, gilt:
+\begin{gather}
+    \Delta P = \sqrt{\frac{2\cdot0,3\cdot h}{c}\cdot 632,8 \cdot 10^{-9}\,\text{m} \cdot 0,1\, \text{mW} \cdot 10 \, \text{kHz}} = 9,16 \cdot 10^{-25}\, \text{W} = -210\, \text{dBm}
+\end{gather}
+
+Für das thermische Rauschen gilt:
+\begin{gather}
+    P_T = 4 \cdot k_B \cdot 293\,\text{K} \cdot 10\,\text{kHz} = 1,62 \cdot 10^{-16}\, \text{W} = -128 \, \text{dBm}
+\end{gather}
+
+Es fällt sofort auf, dass das thermische Rauschendeutlich überwiegt. Das Quantenrauschen ist hier also zu vernachlässigen.
+
+Eine Verstärkung von 55 dB enspricht der Verstärkung um einen Faktor $ 10^{\frac{55}{10}}$.
+Angewendet auf das thermische Rauschenergibt sich somit:
+\begin{gather}
+    P_{T,V} = 10^{\frac{55}{10}} \cdot 1,62 \cdot 10^{-16}\, \text{W} = 5,12 \cdot 10^{-11}\, \text{W} = -72,9 \, \text{dBm}
+\end{gather}
