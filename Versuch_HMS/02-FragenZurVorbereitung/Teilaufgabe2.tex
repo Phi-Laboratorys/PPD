@@ -4,22 +4,21 @@
 
 Im Folgenden soll die Leistung (in dBm) de thermischen Rauschens und des Quantenrauschens für folgenden Fall berechnet werden:
 
-$P = 0,1$ mW, $T = 293$ K, $R_D = 50\, \Omega$, $\beta_D = 0,3$ und $\Delta \nu = 10$ kHz.
+$P = 0,1$ mW, $T = 293$ K, $R_D = 50\, \Omega$, $\beta_D = 0,3$ und $\Delta \nu = 10$ kHz. Aufgrund der Impedanz erscheint der gemmessene hochfrequente Strom um den Faktor 2 kleiner.
 
-Für die Leisungsschwankung, welch durch Quantenrauschen verursacht wird, gilt: (TODO Überprüfen!!)
-\begin{gather}
-    \Delta P = \sqrt{\frac{2\cdot0,3\cdot h}{c}\cdot 632,8 \cdot 10^{-9}\,\text{m} \cdot 0,1\, \text{mW} \cdot 10 \, \text{kHz}} = 9,16 \cdot 10^{-25}\, \text{W} = -210\, \text{dBm}
-\end{gather}
+Für die Leisungsschwankung, welch durch Quantenrauschen verursacht wird, gilt:
+\begin{align}
+    \Delta P_Q &= \frac{1}{2} \sqrt{\frac{2\beta_D h c}{\lambda}P \Delta \nu}\\
+    \Delta P_Q &= \frac{1}{2} \sqrt{\frac{2 \cdot 0,3\cdot h c}{632,8 \cdot 10^{-9}} \cdot 0,1\, \text{mW} \cdot 10 \, \text{kHz}} = 2,17 \cdot 10^{-10}\, \text{W} = -67\, \text{dBm}
+\end{align}
 
 Für das thermische Rauschen gilt:
 \begin{gather}
-    P_T = 4 \cdot k_B \cdot 293\,\text{K} \cdot 10\,\text{kHz} = 1,62 \cdot 10^{-16}\, \text{W} = -128 \, \text{dBm}
+    P_T = 2 \cdot k_B \cdot 293\,\text{K} \cdot 10\,\text{kHz} = 8,1 \cdot 10^{-17}\, \text{W} = -131 \, \text{dBm}
 \end{gather}
 
-Es fällt sofort auf, dass das thermische Rauschendeutlich überwiegt. Das Quantenrauschen ist hier also zu vernachlässigen.
-
-Eine Verstärkung von 55 dB enspricht der Verstärkung um einen Faktor $ 10^{\frac{55}{10}}$.
-Angewendet auf das thermische Rauschenergibt sich somit:
+Es ist zu erkennen, dass das Thermische Rauschengegenüber dem Quantenrauschen zu vernachlässigen ist.
+Somit reicht es die Verstärkung auf das Quantenrauschen anzuwenden, um den Rauschpegel zu erhalten:
 \begin{gather}
-    P_{T,V} = 10^{\frac{55}{10}} \cdot 1,62 \cdot 10^{-16}\, \text{W} = 5,12 \cdot 10^{-11}\, \text{W} = -72,9 \, \text{dBm}
+    P_{Q,V} = -67 \, \text{dBm} + 55\, \text{dB} = -12 \, \text{dBm}
 \end{gather}

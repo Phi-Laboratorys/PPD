@@ -1,3 +1,21 @@
 % Teilaufgabe X
 
 \section{Berechnung der Signalleistung einer schmalen Absorptionslinie}
+
+Für das gemessene Signal mit einem Messgerät mit 50 $\Omega$ Impedanz gilt:
+\begin{gather}
+    i_{S,mess}^2 = \frac{1}{2}(\frac{e\beta_D}{2hc}\lambda P M \frac{ln10}{2}OD)^2
+\end{gather}
+
+Für die Leistung gilt:
+\begin{align}
+    P_{S,mess} &= \frac{1}{\sqrt{2}}\frac{\beta_D}{2} P M \frac{ln10}{2} OD\\
+    P_{S,mess} &= \frac{1}{\sqrt{2}}\frac{0,3}{2} \cdot 0,1 \, \text{mW} \cdot 0,4 \cdot \frac{ln10}{2} \cdot 0,1 = 5 \cdot 10^{-7} \, \text{W} = -33 \, \text{dBm}
+\end{align}
+
+Unter Berücksichtigung der Verstärkung gilt:
+\begin{gather}
+    P_{S,v} = -33 \, \text{dBm} + 55 \, \text{dB} = 22 \, \text{dBm}
+\end{gather}
+
+Somit ergibt sich ein Signal-Rausch-Abstand von $34$ dB.
