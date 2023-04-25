@@ -9,7 +9,7 @@
 \section{Vorarbeiten}
 \label{sec:vorarbeit}
 
-Der Versuchsaufbau wurde schon für die Versuchsteilnehmer komplett aufgebaut. Nur der Chopper musste so eingestellt werden, dass der Strahlengang nicht durch die Jod-Probe läuft. Der Versuch wird hier auch nur mit der Jod-Probe durch geführt. Die meisten Messwerte werden vom Oszilloskop ausgemessen, wobei dabei ein Fehler von $\pm$ 5 immer angenommen.
+Der Versuchsaufbau wurde schon für die Versuchsteilnehmer komplett aufgebaut. Nur der Chopper musste so eingestellt werden, dass der Strahlengang nicht durch die Jod-Probe läuft. Der Versuch wird hier auch nur mit der Jod-Probe durch geführt. Die meisten Messwerte werden vom Oszilloskop ausgemessen, wobei dabei wurde immer ein Fehler von $\pm$ 5\,mV bei kleinen Bildern und $\pm$ 3\,mV bei großen Bildern angenommen.
 
 \section{Freier Spektralbereich}
 \label{sec:specBereich}
@@ -35,7 +35,7 @@ Bei der Bestimmung treten Fehler der optischen Art auf, da hier nur mit dem Auge
     \begin{tabular}{c c}
         \includegraphics[width=0.45\textwidth]{Bilder/FSR/fsr_oszi.jpg} & \includegraphics[width=0.45\textwidth]{Bilder/FSR/fsr_hf-generator.jpg}
     \end{tabular}
-    \caption{Messung freier Spektralbereich}
+    \caption{Messung freier Spektralbereich FSR: links Oszilloskop rechts eingestellte Frequenz  $\omega_\mathrm{m}$}
     \label{fig:specBereich}
 \end{center}
 
@@ -48,14 +48,18 @@ Als nächster Schritt wird die Finesse $F$ bestimmt mit Hilfe von Kapitel \ref{s
     \delta \lambda = ( 44 \pm 3)\,\mu\mathrm{s}~~~~~~\mathrm{FSR}_\mathrm{OS} = (7,9 \pm 0.5)\,\mathrm{ms}\\[0,5cm]
     \Rightarrow \boxed{F = \frac{\mathrm{FSR}_\mathrm{OS}}{\delta \lambda} = (180 \pm 17)}
 \end{gather}
-
+\vspace{2cm}
 \begin{center}
     \captionsetup{type=figure}
     \begin{tabular}{c c}
         \includegraphics[width=0.45\textwidth]{Bilder/Finess/finess_fsr_oszi.jpg} & \includegraphics[width=0.45\textwidth]{Bilder/Finess/finess_hf-generator.jpg}\\
         \includegraphics[width=0.45\textwidth]{Bilder/Finess/finess_max_oszi.jpg} & \includegraphics[width=0.45\textwidth]{Bilder/Finess/finess_hb_oszi.jpg}\\
     \end{tabular}
-    \caption{Messung Finesse $F$}
+    \caption{Messung Finesse $F$:\\
+    oben rechts: Messung des freien Spektralbereichs FSR\\
+    oben links: Eingestellte Frequenz  $\omega_\mathrm{m}$\\
+    unten rechts: Messung des Peaksmaximum\\
+    unten links: Messung der Halbwertsbreite $\delta \lambda$}
     \label{fig:finess}
 \end{center}
 
@@ -63,8 +67,10 @@ Als nächster Schritt wird die Finesse $F$ bestimmt mit Hilfe von Kapitel \ref{s
 \section{Modulationsindex}
 \label{sec:mindex}
 
-Als nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfrequenz $\omega_\mathrm{m}$ Dabei werden folgende Werte in Tab. \ref{tab:mindex} eingestellt und daraus die Höhe aus dem Spektrum mit dem Oszilloskop abgelesen. Beachte, dass $\omega_\mathrm{m} = 0$\,MHz den ausgeschalteten HF-Generator darstellt.
-
+Als nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfrequenz $\omega_\mathrm{m}$ Dabei werden folgende Werte in Tab. \ref{tab:mindex} eingestellt und daraus die Höhe aus dem Spektrum mit dem Oszilloskop abgelesen. Beachte, dass $\omega_\mathrm{m} = 0$\,MHz den ausgeschalteten HF-Generator darstellt. Der Modulationsindex wird gemäß der folgenden Formel berechnet:
+\begin{gather}
+    M = \frac{U(\omega_\mathrm{m})}{U(\omega_\mathrm{m} = 0)}
+\end{gather}
 \begin{center}
     \captionsetup{type=table}
     \begin{tabular}{r | c c}
@@ -91,7 +97,7 @@ Als nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfre
         \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_200.jpg} 
         & \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_400.jpg}  \\
     \end{tabular}
-    \captionof{figure}{Messung Modulationsindex $M$ für $\omega_\mathrm{m} = 0 - 400$\,Mhz}
+    \captionof{figure}{Messung Modulationsindex $M$ für $\omega_\mathrm{m} = 0, 50, 200, 400$\,Mhz (von oben nach unten)}
     \label{fig:mindex1}
 \end{center}
 
@@ -104,7 +110,7 @@ Als nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfre
         & \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_1200.jpg} \\
         \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_1350.jpg}
     \end{tabular}
-    \captionof{figure}{Messung Modulationsindex $M$ für $\omega_\mathrm{m} = 600 - 1350$\,Mhz}
+    \captionof{figure}{Messung Modulationsindex $M$ für $\omega_\mathrm{m} = 600, 800, 1000, 1200, 1350$\,Mhz (von oben nach unten)} 
     \label{fig:mindex2}
 \end{center}
 
@@ -147,7 +153,7 @@ Bilder gespeichert in Datei: \textit{scope\_1}, \textit{scope\_2}
     \begin{tabular}{c c}
         \includegraphics[scale=0.25]{Bilder/Signal-Rausch/scope_2.png} & \includegraphics[width=0.45\textwidth]{Bilder/Signal-Rausch/signal-rausch_paper_hf-generator.jpg}
     \end{tabular}
-    \captionof{figure}{Messung spektrale Breite $\Delta \Omega$}
+    \captionof{figure}{Messung spektrale Breite $\Delta \Omega$: links Oszilloskop rechts eingestellte Frequenz  $\omega_\mathrm{m}$}
     \label{fig:specBreite}
 \end{center}
 
@@ -204,10 +210,12 @@ Bild gespeichert in Datei: \textit{scope\_3}
 
 \begin{center}
     \captionsetup{type=figure}
-    \includegraphics[scale=0.5]{Bilder/Signal-Rausch/scope_3.png}
-    \captionof{figure}{Messung optische Dichte OD}
+    \includegraphics[scale=0.3]{Bilder/Signal-Rausch/scope_3.png}
+    \captionof{figure}{Beispielmessung für die optische Dichte OD}
     \label{fig:verluste}
 \end{center}
+
+\newpage
 
 \section{Absorptions- und Dispersionssignal einer Jodlinie}
 \label{sub:jodline}
@@ -243,7 +251,7 @@ Für die Absorptions- und Dispersionssignal einer Jodlinie wird zuerst das Signa
         546,0  & 1020,00 $\pm$ 5 \\
         573,6  & 905,00  $\pm$ 5 \\
         600,9  & 917,50  $\pm$ 5 \\
-        629,4  & 955.00  $\pm$ 5 \\
+        629,4  & 955,00  $\pm$ 5 \\
         656,0  & 1087,50 $\pm$ 5 \\
         683,1  & 867,50  $\pm$ 5 \\
         711,6  & 837,50  $\pm$ 5 \\
@@ -285,12 +293,26 @@ Da weiter Messung nicht eingestellt werden konnte, wurden den Versuchsteilnehmer
     \captionsetup{type=table}
     \begin{tabular}{r | r r r r | c }
         $\omega_\mathrm{m}$/MHz & $U^{\mathrm{Ref}}_B$/mV & $U^{\mathrm{Ref}}_P$/mV & $U^{\mathrm{Probe}}_B$/mV & $U^{\mathrm{Probe}}_P$/mV & Datei \\ \hline
-        79,7   & 3,125 $\pm$ 3 & 130,63 $\pm$ 3 & 3,125 $\pm$ 3 & 133,12 $\pm$ 3  & scope\_6, scope\_7 \\
-        491,9  & 1,25 $\pm$ 3 & 268,75 $\pm$ 3 & -148,75 $\pm$ 3 & 121,25 $\pm$ 3 & scope\_4, scope\_5 \\
-        989,1  & -17,5 $\pm$ 3 & 265,0 $\pm$ 3 & -337,5 $\pm$ 3 & -17,5 $\pm$ 3 & scope\_8, scope\_9 \\
+        79,7   & 3 $\pm$ 3 & 131 $\pm$ 3 & 3 $\pm$ 3 & 133 $\pm$ 3  & scope\_6, scope\_7 \\
+        491,9  & 1 $\pm$ 3 & 269 $\pm$ 3 & -149 $\pm$ 3 & 121 $\pm$ 3 & scope\_4, scope\_5 \\
+        989,1  & -18 $\pm$ 3 & 265 $\pm$ 3 & -338 $\pm$ 3 & -18 $\pm$ 3 & scope\_8, scope\_9 \\
     \end{tabular}
     \captionof{table}{Werte von der Messung Absorption}
     \label{tab:absorp}
+\end{center}
+
+\begin{center}
+    \captionsetup{type=figure}
+    \begin{tabular}{c c}
+        \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_6.png} 
+        & \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_7.png} \\
+        \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_4.png}
+        & \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_5.png} \\
+        \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_8.png}
+        & \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_9.png}
+    \end{tabular}
+    \captionof{figure}{Messung der Absorption rechts Referenz links Probe für $\omega_\mathrm{m} $ = 79,7; 491,9; 989,1\,Mhz (von oben nach unten)}
+    \label{fig:absorp}
 \end{center}
 
 %Das Messprotokoll wurde am Versuchstag handschriftlich erstellt und hier als
