@@ -9,7 +9,7 @@
 \section{Vorarbeiten}
 \label{sec:vorarbeit}
 
-Der Versuchsaufbau wurde schon für die Versuchsteilnehmer komplett aufgebaut. Nur der Chopper musste so eingestellt werden, dass der Strahlengang nicht durch die Jod-Probe läuft. Der Versuch wird hier auch nur mit der Jod-Probe durch geführt. Die meisten Messwerte werden vom Oszilloskop ausgemessen, wobei dabei wurde immer ein Fehler von $\pm$ 5\,mV bei kleinen Bildern und $\pm$ 3\,mV bei großen Bildern angenommen.
+Der Versuchsaufbau wurde schon für die Versuchsteilnehmer komplett aufgebaut. Nur der Chopper musste so eingestellt werden, dass der Strahlengang nicht durch die Jod-Probe läuft. Der Versuch wird hier auch nur mit der Jod-Probe durch geführt. Die meisten Messwerte werden vom Oszilloskop ausgemessen, wobei dabei wurde immer ein Fehler von $\pm$ 5\,mV bei kleinen Bildern und $\pm$ 3\,mV bei großen Bildern angenommen. Zudem ist anzumerken, dass die Modulationsfrequenz $\omega_\mathrm{m}$ als fehlerfrei angenommen wird und deshalb keinen Messfehler besitzt.
 
 \section{Freier Spektralbereich}
 \label{sec:specBereich}
@@ -74,7 +74,7 @@ Als nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfre
 \begin{center}
     \captionsetup{type=table}
     \begin{tabular}{r | c c}
-        $\omega_\mathrm{m}$/MHz & $U$/mV & M \\ \hline
+        $\omega_\mathrm{m}$/MHz & $U$/mV & $M$ \\ \hline
         0    & 346 $\pm$ 5 & --- \\
         50   & 303 $\pm$ 5 & 0,88 $\pm$ 0,02 \\
         200  & 294 $\pm$ 5 & 0,86 $\pm$ 0,02 \\
@@ -122,10 +122,10 @@ Als nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfre
 \subsection{Optische Dichte OD}
 \label{sub:opDichte}
 
-In diesem Abschnitt berechnen wir die optische Dichte OD des Etalons. Hierfür wurden die Photodiode 3 angeschlossen, welche das Reflexionssignal des Etalons misst. Dabei ergeben sich folgende Werte:
+In diesem Abschnitt berechnen wir die optische Dichte OD des Etalons. Hierfür wurden die Photodiode 3 angeschlossen, welche das Reflexionssignal des Etalons misst. Dabei ergeben sich folgende Werte mit Fehler aus Fehlerfortpflanzungsgesetz:
 \begin{gather}
     I_0 = (110 \pm 5)\,\mathrm{mV}, ~~~I = (89 \pm 5)\,\mathrm{mV}\\[0,5cm]
-    \Rightarrow \boxed{\mathrm{OD} = \log_{10}\left(\frac{I_0}{I}\right) = 0,09}
+    \Rightarrow \boxed{\mathrm{OD} = \log_{10}\left(\frac{I_0}{I}\right) = 0,09 \pm 0,07}
 \end{gather} 
 
 \begin{center}
@@ -142,7 +142,7 @@ Das Signal wird verrauscht aufgrund der fehlenden phasensentiven Detektion des L
 \begin{gather}
     \Delta R = \frac{2 \omega_\mathrm{m}}{\Delta \Omega} \Leftrightarrow \Delta \Omega = \frac{2 \omega_\mathrm{m}}{\Delta R}~.
 \end{gather}
-Gemessen wurde die Modulationsfrequenz $\omega_\mathrm{m} = 27,3$\,MHz was dann dolgende spektrale Breite ergibt: 
+Gemessen wurde die Modulationsfrequenz $\omega_\mathrm{m} = 27,3$\,MHz was dann folgende spektrale Breite ergibt: 
 \begin{gather}    
     \Rightarrow \boxed{\Delta \Omega = 10,9\,\mathrm{MHz}}~.
 \end{gather}
