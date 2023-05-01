@@ -1,26 +1,53 @@
 % Teilauswertung X
 
+\newpage
 \section{Absorption und Dispersion einer Jodlinie}
 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.95\textwidth]{Bilder/Jodlinie/Gruppe32020Iododgraph1 Kopie.png}
-    \caption[Iodlinie]{Iodlinie}
+    \includegraphics[width=0.75\textwidth]{Bilder/Jodlinie/Gruppe32020Iododgraph1 Kopie.png}
+    \caption[Iodlinie]{Iodlinie (Ersatzmessung, Gruppe 3, 2020)}
 \end{figure}
 
-\subsection{Nachprüfen der Absorption}
+%\subsection{Nachprüfen der Absorption}
 
-Zur Nachprüfung des Berechneten Absorptionssignals wurden bei drei Frequenzen manuell eine Messung mit und ohne Probe durchgeführt.
+Zur Nachprüfung des Berechneten Absorptionssignals wurden bei drei Frequenzen manuell eine Messung mit und ohne Probe durchgeführt. $\Delta U$ ist die Differenz der Spannung von Basis zur Spitze, jeweils durch die Probe und ohne die selbige. Aus diesen Werten wird dann die optische Dichte berechnet.
 
-Fehlerrechnung für OD!!
+
 \begin{table}[h]
     \centering
-    \begin{tabular}{c|cc|c}
-        $\omega_m$/MHz & $\Delta U_{Ref}$ / mV & $\Delta U_{Probe}$ / mV & OD \\ \hline
-        79,7 & $128 \pm 4$ & $130 \pm 4$ & $-6,73 \cdot 10^{-3}$ \\
-        491,9 & $268 \pm 4$ & $270 \pm 4$ & $-3,23 \cdot 10^{-3}$ \\
-        989,1 & $283 \pm 4$ & $320 \pm 4$ & $-0,0534$ \\
+    \begin{tabular}{c|cc|cc}
+        $\omega_m$/MHz & $\Delta U_{Ref}$ / mV & $\Delta U_{Probe}$ / mV & OD/2,22 & OD \\ \hline
+        79,7 & $128 \pm 4$ & $130 \pm 4$ & $0,00 \pm 0,02$ & $0,00 \pm 0,04$ \\
+        491,9 & $268 \pm 4$ & $270 \pm 4$ & $0,003 \pm 0,009$ & $0,007 \pm 0,02$ \\
+        989,1 & $283 \pm 4$ & $320 \pm 4$ & $0,053 \pm 0,008$ & $0,12 \pm 0,02$ \\
     \end{tabular}
-    \caption[short]{title}
+    \caption{Ergebnisse für manuelle Messung der optischen Dichte.}
 \end{table}
+
+Betrachtet man die Werte aus der obigen Tabelle, für die optische Dichte, so fällt auf, dass diese mit der Frequenz ansteigen. Von 0 bei 79,7 MHz bis ca. 0,05 bei 989,1 MHz. Vergleicht man dies mit der obigen Abbildung der Absorptionslinie für Iod, so stimmen diese im Trend gut überein. Die Letzten zwei Werte weichen jedoch etwas von denen aus der Abbildung ab. Hierzu ist anzumerken, dass die Abbildung von einer Anderen Gruppe aus dem Jahr 2020 verwendet wurde, da der Versuchsaufbau nicht einwandfrei funktioniert hat. In wie weit die Messungen also vergleichbar sind ist unklar.
+
+Hier wurde mit einem Korrekturfaktor von 2,22 gearbeitet, da unsere Rechteckfunktion aber eher Trabetzförmig ist und die Ecken etwas abgerundet sind, weicht der Wert des Faktors wohl etwas nach unten ab.
+
+Für die Vakuumwellenlänge der Iodlinie gilt:
+\begin{gather}
+    \lambda = \frac{c_0}{f} = (632,9915 \pm 0,0004) \, \text{nm}
+\end{gather}
+In Luft ($n_{Luft} = 1,0003$) gilt:
+\begin{gather}
+    \lambda_{Luft} = \frac{\lambda}{n_{Luft}} = (632,8017 \pm 0,0004)\, \text{nm}
+\end{gather}
+
+Aus dem Diagramm konnte Breite der Jodlinie, am halben Maximalwert, von ca. 848MHz abgelesen werden.
+Für die Dopplerbreite gilt:
+\begin{gather}
+    \delta f = \frac{f_0}{c} \sqrt{\frac{8 k_B T ln2}{m}}
+\end{gather}
+In unserem Fall git: $f_0 \approx 880$ MHz,  $T \approx 294$ K und $m = 2 \cdot 126,9 u$.
+\begin{gather}
+    \Rightarrow \delta f \approx 678 \, \text{MHz}
+\end{gather}
+Es fällt auf, dass der ermittelte Wert merklich größer ist als der theoretische. Dies liegt daran, dass es eine nicht aufgelöste Hyperfeinstruktur gibt, deren Komponenten ebenfalls eine Dopplerverbreiterung erfahren.
+
+Extremwerte der Phasenänderung??
