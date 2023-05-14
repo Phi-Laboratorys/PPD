@@ -124,8 +124,8 @@ Als nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfre
 
 In diesem Abschnitt berechnen wir die optische Dichte OD des Etalons. Hierfür wurden die Photodiode 3 angeschlossen, welche das Reflexionssignal des Etalons misst. Dabei ergeben sich folgende Werte mit Fehler aus Fehlerfortpflanzungsgesetz:
 \begin{gather}
-    I_0 = (110 \pm 5)\,\mathrm{mV}, ~~~I = (89 \pm 5)\,\mathrm{mV}\\[0,5cm]
-    \Rightarrow \boxed{\mathrm{OD} = \log_{10}\left(\frac{I_0}{I}\right) = 0,09 \pm 0,07}
+    U_0 = (110 \pm 5)\,\mathrm{mV}, ~~~U = (89 \pm 5)\,\mathrm{mV}\\[0,5cm]
+    \Rightarrow \boxed{\mathrm{OD} = \log_{10}\left(\frac{U_0}{U}\right) = 0,09 \pm 0,07}
 \end{gather} 
 
 \begin{center}
@@ -169,7 +169,7 @@ Als nächstes wird das Ausgangssignal mit dem Spekturmanalysator dafür wählen 
 \begin{center}
     \captionsetup{type=table}
     \begin{tabular}{r | c c}
-        $\omega_\mathrm{m}$/MHz & $P_\mathrm{S}$/dBm & $P_\mathrm{R}$/dBm \\ \hline
+        $\omega_\mathrm{m}$/MHz & $P^*_\mathrm{S}$/dBm & $P^*_\mathrm{R}$/dBm \\ \hline
         50   & -30 $\pm$ 3 & -80 $\pm$ 3 \\
         200  & -30 $\pm$ 3 & -80 $\pm$ 3 \\
         400  & -23 $\pm$ 3 & -80 $\pm$ 3 \\
@@ -183,6 +183,8 @@ Als nächstes wird das Ausgangssignal mit dem Spekturmanalysator dafür wählen 
     \label{tab:specAnal}
 \end{center}
 Wenn man das Signal des Lasers abblockt verändert sich hierbei der Rauschpegel \textbf{nicht}.
+
+\newpage
 
 \subsection{Konversionsverluste des Mischers}
 \label{sub:verluste}
