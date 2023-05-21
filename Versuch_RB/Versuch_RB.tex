@@ -23,7 +23,7 @@
 \usepackage{amsmath,amssymb,amstext}
 \usepackage{siunitx}
 \usepackage{url}
-\usepackage{natbib}
+\usepackage[numbers, super]{natbib}
 \usepackage{microtype}
 \usepackage[format=plain]{caption}
 \usepackage{physics}
@@ -40,6 +40,7 @@
 \usepackage{tikz} % Zeichnungen
 \usepackage{pdfpages} % Import von pdfs (Protokolle)
 \usepackage{hyperref} % Verlinkungen im Dokument
+\usepackage{subfigure}
 
 % Abschnittseinrückung und -abstand
 % Die folgenden Zeilen sollen möglichst nicht verändert werden
@@ -102,7 +103,7 @@
 
     % Literatur
     \bibliographystyle{Auswertung.bst}
-    \nocite{*}
+    % \nocite{*}
     \bibliography{Auswertung.bib}
 
 \end{document}
