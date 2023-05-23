@@ -4,22 +4,22 @@
 
 Im Folgenden soll die Leistung (in dBm) de thermischen Rauschens und des Quantenrauschens für folgenden Fall berechnet werden:
 
-$P = 0,1$ mW, $T = 293$ K, $R_D = 50\, \Omega$, $\beta_D = 0,3$ und $\Delta \nu = 10$ kHz.
+$P = 0,1$ mW, $T = 293$ K, $R_\mathrm{D} = 50\, \Omega$, $\beta_D = 0,3$ und $\Delta \nu = 10$ kHz.
 
 Für die Leisungsschwankung, welch durch Quantenrauschen verursacht wird, gilt:
 \begin{align}
     \Delta P_\mathrm{Q} &= i^2_\mathrm{Q} \cdot R_\mathrm{D} = \frac{2e^2\beta_\mathrm{D}}{hc}\lambda P \Delta \nu \cdot R_\mathrm{D}\\
     \Delta P_\mathrm{Q} &= \frac{2e^2 \cdot 0,3}{hc} \cdot (632,8 \cdot 10^{-9}) \, \mathrm{m} \cdot (0,1 \cdot 10^{-3})\, \mathrm{W} \cdot (10 \cdot 10^3) \, \mathrm{Hz} \cdot 50 \, \Omega \\
-    \Delta P_\mathrm{Q} &= 2,45 \cdot 10^{-18} \qquad \Rightarrow \quad -146 \, \mathrm{dBm}
+    \Delta P_\mathrm{Q} &= 2,45 \cdot 10^{-15}\,\mathrm{mW} \qquad \Rightarrow \quad \Delta P_\mathrm{Q}^* = -146 \, \mathrm{dBm}
 \end{align}
 
 Für das thermische Rauschen gilt:
 \begin{gather}
-    P_\mathrm{T} = 4 \cdot k_B \cdot 293\,\text{K} \cdot 10\,\text{kHz} = 1,62 \cdot 10^{-16}\, \text{W} \qquad \Rightarrow \quad -128 \, \text{dBm}
+    P_\mathrm{T} = 4 \cdot k_\mathrm{B} \cdot 293\,\text{K} \cdot 10\,\text{kHz} = 1,62 \cdot 10^{-13}\, \text{mW} \qquad \Rightarrow \quad P_\mathrm{T}^* = -128 \, \text{dBm}
 \end{gather}
 
 Es ist zu erkennen, dass das Quantenrauschen gegenüber dem thermischen Rauschen zu vernachlässigen ist.
-Somit reicht es die Verstärkung auf das thermische Rauschen anzuwenden, um den Rauschpegel zu erhalten:
+Somit reicht es die Verstärkung und die Verringerung von 6\,dbm \cite{anleitung} auf das thermische Rauschen anzuwenden, um den Rauschpegel zu erhalten:
 \begin{gather}
-    P_\mathrm{Q,Total} = -128 \, \text{dBm} + 55\, \text{dB} = -73 \, \text{dBm}
+    P_\mathrm{R,Theo}^* = -128 \, \text{dBm} + 55\, \text{dBm} - 6 \, \text{dBm}= -79 \, \text{dBm}
 \end{gather}

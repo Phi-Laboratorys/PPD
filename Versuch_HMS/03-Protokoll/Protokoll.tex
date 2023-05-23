@@ -14,17 +14,17 @@ Der Versuchsaufbau wurde schon für die Versuchsteilnehmer komplett aufgebaut. N
 \section{Freier Spektralbereich}
 \label{sec:specBereich}
 
-Zuerst wird der freie Spektralbereich mit dem Oszilloskop gemessen. Dafür wird die $\omega_\mathrm{m}$ auf dem Oszilloskop so eingestellt, dass von zwei benachbarten Resonanzordnungen die positive und die negative Seitenlinie übereinanderliegen. Dafür wird am HF-Generator (Hochfrequenzgenerator) eine Frequenz so eingestellt, dass sich die positive und negative der zwei benachbarten Seitenbanden überlappen. Damit ergibt sich der freie Spektralbereich aus dem doppelten eingestellten Modulationsfrequenz $\omega_\mathrm{m}$. 
+Zuerst wird der freie Spektralbereich mit dem Oszilloskop gemessen. Dafür wird die $\omega_\mathrm{m}$ auf dem Oszilloskop so eingestellt, dass von zwei benachbarten Resonanzordnungen die positive und die negative Seitenlinie übereinanderliegen. Dafür wird am HF-Generator (Hochfrequenzgenerator) eine Frequenz so eingestellt, dass sich die positive und negative der zwei benachbarten Seitenbanden überlappen [Abb. \ref{fig:specBereich}]. Damit ergibt sich der freie Spektralbereich aus dem doppelten eingestellten Modulationsfrequenz $\omega_\mathrm{m}$. 
 \begin{gather}
     \omega_\mathrm{m} = ( 1008,5 \pm 5 )\,\mathrm{MHz} \\
     \mathrm{FSR}_\mathrm{HF} = 2 \cdot \omega_\mathrm{m} \\
-    \Rightarrow \boxed{\mathrm{FSR}_\mathrm{HF} = ( 2017,0 \pm 5 )\,\mathrm{MHz}}
+    \Rightarrow \boxed{\mathrm{FSR}_\mathrm{HF} = ( 2,017 \pm 0,005 )\,\mathrm{GHz}}
 \end{gather}
 
-Auf den Oszilloskop (OS) wird dann für den freien Spektralbereich eine Frequenz von 
-\begin{gather}
-    \boxed{\mathrm{FSR}_\mathrm{OS} = (51 \pm 2)\,\mathrm{Hz}~ = (19,7 \pm 0,5)\,\mathrm{ms}.}
-\end{gather}
+%Auf den Oszilloskop (OS) wird dann für den freien Spektralbereich eine Frequenz von 
+%\begin{gather}
+%    \boxed{\mathrm{FSR}_\mathrm{OS} = (51 \pm 2)\,\mathrm{Hz}~ = (19,7 \pm 0,5)\,\mathrm{ms}.}
+%\end{gather}
 
 \subsection*{Fehler bei Bestimmung des freien Spektralbereichs}
 
@@ -33,9 +33,10 @@ Bei der Bestimmung treten Fehler der optischen Art auf, da hier nur mit dem Auge
 \begin{center}
     \captionsetup{type=figure}
     \begin{tabular}{c c}
-        \includegraphics[width=0.45\textwidth]{Bilder/FSR/fsr_oszi.jpg} & \includegraphics[width=0.45\textwidth]{Bilder/FSR/fsr_hf-generator.jpg}
+        \includegraphics[width=0.45\textwidth]{Bilder/FSR/fsr_oszi.jpg} & \includegraphics[width=0.45\textwidth]{Bilder/FSR/fsr_hf-generator.jpg} \\
+        (a) Oszilloskop & (b) Eingestellte Frequenz  $\omega_\mathrm{m}$
     \end{tabular}
-    \caption{Messung freier Spektralbereich FSR: links Oszilloskop rechts eingestellte Frequenz  $\omega_\mathrm{m}$}
+    \caption{Messung freier Spektralbereich FSR}
     \label{fig:specBereich}
 \end{center}
 
@@ -43,23 +44,21 @@ Bei der Bestimmung treten Fehler der optischen Art auf, da hier nur mit dem Auge
 \section{Finesse}
 \label{sec:finess}
 
-Als nächster Schritt wird die Finesse $F$ bestimmt mit Hilfe von Kapitel \ref{sec:specBereich}. Dafür die Modulationsfrequenz $\omega_\mathrm{m} = 50\,\mathrm{MHz} \cdot 2\pi = 314.2\,\mathrm{MHz}$ eingestellt und von da aus die Halbwertsbreite $\delta \lambda$ und die freie Spektralbereich FSR mit dem Oszilloskop bestimmt. Daraus ergeben sich folgende Werte, wobei der Fehler der Finesse $F$ mit Fehlerfortpflanzungsgesetz berechnet wurde:
+Als nächster Schritt wird die Finesse $F$ bestimmt mit Hilfe von Kapitel \ref{sec:specBereich}. Dafür die Modulationsfrequenz $\omega_\mathrm{m} = 50\,\mathrm{MHz} \cdot 2\pi = 314.2\,\mathrm{MHz}$ eingestellt und von da aus die Halbwertsbreite $\delta \lambda$ und die freie Spektralbereich FSR mit dem Oszilloskop bestimmt [Abb. \ref{fig:finess}]. Daraus ergeben sich folgende Werte, wobei der Fehler der Finesse $F$ mit Fehlerfortpflanzungsgesetz berechnet wurde:
 \begin{gather}
     \delta \lambda = ( 44 \pm 3)\,\mu\mathrm{s}~~~~~~\mathrm{FSR}_\mathrm{OS} = (7,9 \pm 0.5)\,\mathrm{ms}\\[0,5cm]
-    \Rightarrow \boxed{F = \frac{\mathrm{FSR}_\mathrm{OS}}{\delta \lambda} = (180 \pm 17)}
+    \Rightarrow \boxed{F = \frac{\mathrm{FSR}_\mathrm{OS}}{\delta \lambda} = (180 \pm 20)}
 \end{gather}
-\vspace{2cm}
+\vspace{0,5cm}
 \begin{center}
     \captionsetup{type=figure}
     \begin{tabular}{c c}
         \includegraphics[width=0.45\textwidth]{Bilder/Finess/finess_fsr_oszi.jpg} & \includegraphics[width=0.45\textwidth]{Bilder/Finess/finess_hf-generator.jpg}\\
+        (a) Messung des FSR & (b) Eingestellte Frequenz  $\omega_\mathrm{m}$ \\[0,1cm]
         \includegraphics[width=0.45\textwidth]{Bilder/Finess/finess_max_oszi.jpg} & \includegraphics[width=0.45\textwidth]{Bilder/Finess/finess_hb_oszi.jpg}\\
+        (c) Messung des Peaksmaximum & (d) Messung der Halbwertsbreite $\delta \lambda$ \\
     \end{tabular}
-    \caption{Messung Finesse $F$:\\
-    oben rechts: Messung des freien Spektralbereichs FSR\\
-    oben links: Eingestellte Frequenz  $\omega_\mathrm{m}$\\
-    unten rechts: Messung des Peaksmaximum\\
-    unten links: Messung der Halbwertsbreite $\delta \lambda$}
+    \caption{Messung Finesse $F$}
     \label{fig:finess}
 \end{center}
 
@@ -67,9 +66,9 @@ Als nächster Schritt wird die Finesse $F$ bestimmt mit Hilfe von Kapitel \ref{s
 \section{Modulationsindex}
 \label{sec:mindex}
 
-Als nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfrequenz $\omega_\mathrm{m}$ Dabei werden folgende Werte in Tab. \ref{tab:mindex} eingestellt und daraus die Höhe aus dem Spektrum mit dem Oszilloskop abgelesen. Beachte, dass $\omega_\mathrm{m} = 0$\,MHz den ausgeschalteten HF-Generator darstellt. Der Modulationsindex wird gemäß der folgenden Formel berechnet:
+Als Nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfrequenz $\omega_\mathrm{m}$ gemessen. Dabei werden die Werte aus Tab. \ref{tab:mindex} eingestellt und daraus die Höhe aus dem Spektrum mit dem Oszilloskop abgelesen [Abb. \ref{fig:mindex1}, \ref{fig:mindex2}]. Beachte, dass $\omega_\mathrm{m} = 0$\,MHz den ausgeschalteten HF-Generator darstellt. Der Modulationsindex wird gemäß der folgenden Formel berechnet:
 \begin{gather}
-    M = \frac{U(\omega_\mathrm{m})}{U(\omega_\mathrm{m} = 0)}
+    M = \frac{1}{2} \sqrt{\frac{U(\omega_\mathrm{m})}{U(\omega_\mathrm{m} = 0)}}
 \end{gather}
 \begin{center}
     \captionsetup{type=table}
@@ -92,25 +91,32 @@ Als nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfre
 \begin{center}
     \captionsetup{type=figure}
     \begin{tabular}{c c}
-        \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_0.jpg} 
-        & \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_50.jpg}   \\
-        \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_200.jpg} 
-        & \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_400.jpg}  \\
+        \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_0.jpg} 
+        & \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_50.jpg}   \\
+        (a) $\omega_\mathrm{m} = 0$\,Mhz & (b) $\omega_\mathrm{m} = 50$\,Mhz \\[0,3cm]
+        \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_200.jpg} 
+        & \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_400.jpg}  \\
+        (c) $\omega_\mathrm{m} = 200$\,Mhz & (d) $\omega_\mathrm{m} = 400$\,Mhz \\
     \end{tabular}
-    \captionof{figure}{Messung Modulationsindex $M$ für $\omega_\mathrm{m} = 0, 50, 200, 400$\,Mhz (von oben nach unten)}
+    \captionof{figure}{Messung Modulationsindex $M$}
     \label{fig:mindex1}
 \end{center}
+
+\newpage
 
 \begin{center}
     \captionsetup{type=figure}
     \begin{tabular}{c c}
-        \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_600.jpg} 
-        & \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_800.jpg} \\
-        \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_1000.jpg}
-        & \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_1200.jpg} \\
-        \includegraphics[width=0.45\textwidth]{Bilder/Modulationsindex/mindex_1350.jpg}
+        \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_600.jpg} 
+        & \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_800.jpg} \\
+        (e) $\omega_\mathrm{m} = 600$\,Mhz & (f) $\omega_\mathrm{m} = 800$\,Mhz \\[0,3cm]
+        \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_1000.jpg}
+        & \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_1200.jpg} \\
+        (g) $\omega_\mathrm{m} = 1000$\,Mhz & (h) $\omega_\mathrm{m} = 1200$\,Mhz \\[0,3cm]
+        \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_1350.jpg} & \\
+        (i) $\omega_\mathrm{m} = 1350$\,Mhz & \\
     \end{tabular}
-    \captionof{figure}{Messung Modulationsindex $M$ für $\omega_\mathrm{m} = 600, 800, 1000, 1200, 1350$\,Mhz (von oben nach unten)} 
+    \captionof{figure}{Messung Modulationsindex $M$} 
     \label{fig:mindex2}
 \end{center}
 
@@ -122,7 +128,7 @@ Als nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfre
 \subsection{Optische Dichte OD}
 \label{sub:opDichte}
 
-In diesem Abschnitt berechnen wir die optische Dichte OD des Etalons. Hierfür wurden die Photodiode 3 angeschlossen, welche das Reflexionssignal des Etalons misst. Dabei ergeben sich folgende Werte mit Fehler aus Fehlerfortpflanzungsgesetz:
+In diesem Abschnitt berechnen wir die optische Dichte OD des Etalons. Hierfür wurden die Photodiode 3 angeschlossen, welche das Reflexionssignal des Etalons misst [Abb. \ref{fig:opDichte}]. Dabei ergeben sich folgende Werte mit Fehler aus Fehlerfortpflanzungsgesetz:
 \begin{gather}
     U_0 = (110 \pm 5)\,\mathrm{mV}, ~~~U = (89 \pm 5)\,\mathrm{mV}\\[0,5cm]
     \Rightarrow \boxed{\mathrm{OD} = \log_{10}\left(\frac{U_0}{U}\right) = 0,09 \pm 0,07}
@@ -142,7 +148,7 @@ Das Signal wird verrauscht aufgrund der fehlenden phasensentiven Detektion des L
 \begin{gather}
     \Delta R = \frac{2 \omega_\mathrm{m}}{\Delta \Omega} \Leftrightarrow \Delta \Omega = \frac{2 \omega_\mathrm{m}}{\Delta R}~.
 \end{gather}
-Gemessen wurde die Modulationsfrequenz $\omega_\mathrm{m} = 27,3$\,MHz was dann folgende spektrale Breite ergibt: 
+Gemessen wurde die Modulationsfrequenz $\omega_\mathrm{m} = 27,3$\,MHz [Abb. \ref{fig:specBreite}] was dann folgende spektrale Breite ergibt: 
 \begin{gather}    
     \Rightarrow \boxed{\Delta \Omega = 10,9\,\mathrm{MHz}}~.
 \end{gather}
@@ -151,21 +157,22 @@ Bilder gespeichert in Datei: \textit{scope\_1}, \textit{scope\_2}
 \begin{center}
     \captionsetup{type=figure}
     \begin{tabular}{c c}
-        \includegraphics[scale=0.25]{Bilder/Signal-Rausch/scope_2.png} & \includegraphics[width=0.45\textwidth]{Bilder/Signal-Rausch/signal-rausch_paper_hf-generator.jpg}
+        \includegraphics[scale=0.25]{Bilder/Signal-Rausch/scope_2.png} & \includegraphics[width=0.45\textwidth]{Bilder/Signal-Rausch/signal-rausch_paper_hf-generator.jpg}\\
+        (a) Messung des FSR & (b) Eingestellte Frequenz  $\omega_\mathrm{m}$ \\
     \end{tabular}
-    \captionof{figure}{Messung spektrale Breite $\Delta \Omega$: links Oszilloskop rechts eingestellte Frequenz  $\omega_\mathrm{m}$}
+    \captionof{figure}{Messung spektrale Breite $\Delta \Omega$}
     \label{fig:specBreite}
 \end{center}
 
 \subsection{Schwebung}
 \label{sub:schewbung}
 
-Die angesprochene Schwebung konnte von den Versuchsteilnehmer nicht beobachtet werden.
+Die angesprochene Schwebung konnte von den Versuchsteilnehmern nicht beobachtet werden.
 
-\subsection{Spekturmanalysator}
+\subsection{Spektrumanalysator}
 \label{sub:specAnal}
 
-Als nächstes wird das Ausgangssignal mit dem Spekturmanalysator dafür wählen wir eine Bandbreite von 10\,kHz und einen Videofilter von 100\,Hz untersucht. Dabei lesen wir die Werte der Signalhöhe $P_\mathrm{S}$ und die Höhe des Rauschpegels $P_\mathrm{R}$ von Spekturmanalysator mit dem Cursor ab, was in Tab. \ref{tab:specAnal} dokumentiert wurde.
+Als nächstes wird das Ausgangssignal mit dem Spektrumanalysator untersucht. Dafür wählen wir eine Bandbreite von 10\,kHz und einen Videofilter von 100\,Hz. Dabei lesen wir die Werte der Signalhöhe $P_\mathrm{S}$ und die Höhe des Rauschpegels $P_\mathrm{R}$ von Spektrumanalysator mit dem Cursor ab, was in Tab. \ref{tab:specAnal} dokumentiert wurde.
 \begin{center}
     \captionsetup{type=table}
     \begin{tabular}{r | c c}
@@ -179,7 +186,7 @@ Als nächstes wird das Ausgangssignal mit dem Spekturmanalysator dafür wählen 
         1200 & -19 $\pm$ 3 & -77 $\pm$ 3 \\
         1350 & -18 $\pm$ 3 & -77 $\pm$ 3 \\
     \end{tabular}
-    \captionof{table}{Werte von der Messung am Spekturmanalysator}
+    \captionof{table}{Werte von der Messung am Spektrumanalysator}
     \label{tab:specAnal}
 \end{center}
 Wenn man das Signal des Lasers abblockt verändert sich hierbei der Rauschpegel \textbf{nicht}.
@@ -213,7 +220,7 @@ Bild gespeichert in Datei: \textit{scope\_3}
 \begin{center}
     \captionsetup{type=figure}
     \includegraphics[scale=0.3]{Bilder/Signal-Rausch/scope_3.png}
-    \captionof{figure}{Beispielmessung für die optische Dichte OD}
+    \captionof{figure}{Beispielmessung für Konversionsverluste}
     \label{fig:verluste}
 \end{center}
 
@@ -285,11 +292,11 @@ Für die Absorptions- und Dispersionssignal einer Jodlinie wird zuerst das Signa
         1344,4 & 1092,50 $\pm$ 5 \\
     \end{tabular}
     \end{tabular}
-    \captionof{table}{Werte von der Messung am Spekturmanalysator}
+    \captionof{table}{Werte von der Messung am Spektrumanalysator}
     \label{tab:jodline}
 \end{center}
 
-Da weiter Messung nicht eingestellt werden konnte, wurden den Versuchsteilnehmer die Messdaten der Gruppe 3 aus dem Jahr 2020 übergeben, um die Auswertung zu bewerkstelligen. Dennoch werden drei Werte per Hand gemessen, was in Tab. \ref{tab:absorp} dargestellt wurde. Dafür wird von Basis(Index B) zu Spitze (Index P) für die Referenz (Potenz Ref) und die Probe (Potenz Probe) gemessen.
+Da weiter Messung nicht eingestellt werden konnte, wurden den Versuchsteilnehmer die Messdaten der Gruppe 3 aus dem Jahr 2020 übergeben, um die Auswertung zu bewerkstelligen. Dennoch werden drei Werte per Hand gemessen [Abb. \ref{fig:absorp}], was in Tab. \ref{tab:absorp} dargestellt wurde. Dafür wird von Basis(Index B) zu Spitze (Index P) für die Referenz (Potenz Ref) und die Probe (Potenz Probe) gemessen.
 
 \begin{center}
     \captionsetup{type=table}
@@ -306,14 +313,18 @@ Da weiter Messung nicht eingestellt werden konnte, wurden den Versuchsteilnehmer
 \begin{center}
     \captionsetup{type=figure}
     \begin{tabular}{c c}
+        \textbf{Referenz} & \textbf{Probe} \\[0,5cm]
         \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_6.png} 
-        & \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_7.png} \\
+        & \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_7.png} \\ 
+        \multicolumn{2}{c}{(a) $\omega_\mathrm{m} $ = 79,7\,Mhz} \\[0,3cm]
         \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_4.png}
         & \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_5.png} \\
+        \multicolumn{2}{c}{(b) $\omega_\mathrm{m} $ = 491,9\,Mhz} \\[0,3cm]
         \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_8.png}
-        & \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_9.png}
+        & \includegraphics[width=0.45\textwidth]{Bilder/Jodlinie/scope_9.png} \\
+        \multicolumn{2}{c}{(c) $\omega_\mathrm{m} $ = 989,1\,Mhz} 
     \end{tabular}
-    \captionof{figure}{Messung der Absorption rechts Referenz links Probe für $\omega_\mathrm{m} $ = 79,7; 491,9; 989,1\,Mhz (von oben nach unten)}
+    \captionof{figure}{Messung des Absorptionssignals)}
     \label{fig:absorp}
 \end{center}
 
