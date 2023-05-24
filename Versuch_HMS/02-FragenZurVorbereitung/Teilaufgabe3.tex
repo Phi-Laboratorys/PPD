@@ -11,14 +11,13 @@ Für das gemessene Signal mit einem Messgerät mit 50 $\Omega$ Impedanz gilt:
 Für die Leistung gilt:
 \begin{align}
     \label{eq:leistungPhotosignal}
-    P_\mathrm{S,Mess} &= \frac{1}{2}(\frac{e\beta_\mathrm{D}}{2hc}\lambda P M \frac{\ln10}{2}\mathrm{OD})^2 \cdot R_\mathrm{D}\\
-    P_\mathrm{S,Mess} &= \frac{1}{2} ( \frac{e\cdot 0,3}{2\cdot h c} \cdot (632,8 \cdot 10^{-9}) \, \mathrm{m} \cdot (0,1 \cdot 10^{-3}) \, \mathrm{W} \cdot 0,4 \cdot \frac{ln(10)}{2} \cdot 0,1)^2 \cdot 50 \Omega \\
-    P_\mathrm{S,Mess} &= 3,11 \cdot 10^{-12} \qquad \Rightarrow \quad -85 \, \mathrm{dBm}
+    P_\mathrm{S} &= \frac{1}{2}(\frac{e\beta_\mathrm{D}}{2hc}\lambda P M \frac{\ln10}{2}\mathrm{OD})^2 \cdot R_\mathrm{D}\\
+    P_\mathrm{S} &= \frac{1}{2} ( \frac{e\cdot 0,3}{2\cdot h c} \cdot (632,8 \cdot 10^{-9}) \, \mathrm{m} \cdot (0,1 \cdot 10^{-3}) \, \mathrm{W} \cdot 0,4 \cdot \frac{ln(10)}{2} \cdot 0,1)^2 \cdot 50 \Omega \\
+    P_\mathrm{S} &= 3,11 \cdot 10^{-9}\,\mathrm{mW} \qquad \Rightarrow \quad P_\mathrm{S}^* = -85 \, \mathrm{dBm}
 \end{align}
 
-Unter Berücksichtigung der Verstärkung gilt:
+Unter Berücksichtigung der Verstärkung (Verringerung muss nicht angewendet werden, da schon die angepasste Formel genutzt wurde) gilt:
 \begin{gather}
-    P_\mathrm{S,Total} = -85 \, \text{dBm} + 55 \, \text{dB} = -30 \, \text{dBm}
+    P_\mathrm{S,Theo}^* = -85 \, \text{dBm} + 55 \, \text{dBm} = -30 \, \text{dBm}
 \end{gather}
-
-Somit ergibt sich ein Signal-Rausch-Abstand von $18$ dB.
+Somit ergibt sich ein Signal-Rausch-Abstand von 49\,dB.
