@@ -12,9 +12,14 @@
 
 %\subsection{Nachprüfen der Absorption}
 
-Zur Nachprüfung des Berechneten Absorptionssignals wurden bei drei Frequenzen manuell eine Messung mit und ohne Probe durchgeführt. $\Delta U$ ist die Differenz der Spannung von Basis zur Spitze, jeweils durch die Probe und ohne die selbige. Aus diesen Werten wird dann die optische Dichte berechnet.
+Zur Nachprüfung des berechneten Absorptionssignals wurden bei drei Frequenzen manuell eine Messung mit und ohne Probe durchgeführt. $\Delta U$ ist die Differenz der Spannung von Basis zur Spitze, jeweils durch die Probe und ohne die selbige. Aus diesen Werten wird dann die optische Dichte mit folgender Formel berechnet.
+\begin{align}
+    OD = \frac{\Delta U}{U_\mathrm{A}} \cdot OD_\mathrm{FPI}
+\end{align}
+Wobei $\Delta U$ die Spannungsdifferenz der Basislinien der Messungen mit und ohne Zelle ist, $U_\mathrm{A}$ die Höhe der einfachen Peaks der Messungen mit der Zelle und $OD_\mathrm{FPI} = 0,09 \pm 0,07$ die optische Dichte des FPI.
 
 
+TODO: Tabelle überarbeiten, Werte ausbessern!!
 \begin{table}[h]
     \centering
     \begin{tabular}{c|cc|cc}
@@ -26,9 +31,9 @@ Zur Nachprüfung des Berechneten Absorptionssignals wurden bei drei Frequenzen m
     \caption{Ergebnisse für manuelle Messung der optischen Dichte.}
 \end{table}
 
-Betrachtet man die Werte aus der obigen Tabelle, für die optische Dichte, so fällt auf, dass diese mit der Frequenz ansteigen. Von 0 bei 79,7 MHz bis ca. 0,05 bei 989,1 MHz. Vergleicht man dies mit der obigen Abbildung der Absorptionslinie für Iod, so stimmen diese im Trend gut überein. Die Letzten zwei Werte weichen jedoch etwas von denen aus der Abbildung ab. Hierzu ist anzumerken, dass die Abbildung von einer Anderen Gruppe aus dem Jahr 2020 verwendet wurde, da der Versuchsaufbau nicht einwandfrei funktioniert hat. In wie weit die Messungen also vergleichbar sind ist unklar.
+Betrachtet man die Werte aus der obigen Tabelle, für die optische Dichte, so fällt auf, dass diese mit der Frequenz ansteigen. Von 0 bei 79,7 MHz bis ca. 0,05 bei 989,1 MHz. Vergleicht man dies mit der obigen Abbildung der Absorptionslinie für Iod, so stimmen diese im Trend gut überein. Die Letzten zwei Werte weichen jedoch etwas von denen aus der Abbildung ab. Hierzu ist anzumerken, dass die Abbildung von einer anderen Gruppe aus dem Jahr 2020 verwendet wurde, da der Versuchsaufbau nicht einwandfrei funktioniert hat. Inwieweit die Messungen also vergleichbar sind, ist unklar.
 
-Hier wurde mit einem Korrekturfaktor von 2,22 gearbeitet, da unsere Rechteckfunktion aber eher Trabetzförmig ist und die Ecken etwas abgerundet sind, weicht der Wert des Faktors wohl etwas nach unten ab.
+Hier wurde mit einem Korrekturfaktor von 2,22 gearbeitet, da unsere Rechteckfunktion aber eher Trapezförmig ist und die Ecken etwas abgerundet sind, weicht der Wert des Faktors wohl etwas nach unten ab.
 
 Für die Vakuumwellenlänge der Iodlinie gilt:
 \begin{gather}
@@ -51,7 +56,7 @@ In unserem Fall git: $f_0 \approx 880$ MHz,  $T \approx 294$ K und $m = 2 \cdot 
 Es fällt auf, dass der ermittelte Wert merklich größer ist als der theoretische. Dies liegt daran, dass es eine nicht aufgelöste Hyperfeinstruktur gibt, deren Komponenten ebenfalls eine Dopplerverbreiterung erfahren.
 
 
-Im folgendem soll aus de Extremwerten der Phasenändeerung $\Delta \Phi$ die Brechungsindexänderung $\Delta \eta$ berechnet werden. Folgende Formel wird dafür genutzt:
+Im folgenden soll aus den Extremwerten der Phasenänderung $\Delta \Phi$ die Brechungsindexänderung $\Delta \eta$ berechnet werden. Folgende Formel wird dafür genutzt:
 \begin{gather}
     \Delta \eta = \Delta \Phi \frac{\lambda}{2 \pi L}
 \end{gather}
@@ -60,5 +65,5 @@ Es gilt: $\Delta \Phi \approx 0,11$. Daraus folgt:
     \Delta \eta \approx 2,8 \cdot 10^{-8}
 \end{gather}
 
-Betrachtet man den Nullldurchgang des Dispersionssignales so fällt auf, dass er vor dem Peak des Absorptionssignales liegt. Bei gültigen Kramer-Kronig-Realationen würde man erwarten das sich diese Punklte übereinander befinden. Dies kann möglicherweiße durch eine Leistungsverbreiterung der Linien verursacht worden sein. Diese würde dazu führen, dass die mathematische Voraussetzungen für die Gültigkeit der Relationen nicht erfüllt wären.
-Auseerdem ist der Verlauf der der Absorptionslinie bezüglich des Nulldurchgangs auffallend, bei gültigen Krameers-Kronig-Relationen würde man einen symmetrischen Verlauf erwarten.
+Betrachtet man den Nulldurchgang des Dispersionssignales so fällt auf, dass er vor dem Peak des Absorptionssignales liegt. Bei gültigen Kramer-Kronig-Relationen würde man erwarten das sich diese Punkte übereinander befinden. Dies kann möglicherweise durch eine Leistungsverbreiterung der Linien verursacht worden sein. Diese würde dazu führen, dass die mathematischen Voraussetzungen für die Gültigkeit der Relationen nicht erfüllt wären.
+Außerdem ist der Verlauf der Absorptionslinie bezüglich des Nulldurchgangs auffallend, bei gültigen Kramers-Kronig-Relationen würde man einen symmetrischen Verlauf erwarten.
