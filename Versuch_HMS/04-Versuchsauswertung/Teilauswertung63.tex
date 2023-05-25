@@ -8,6 +8,7 @@
     \centering
     \includegraphics[width=0.75\textwidth]{Bilder/Jodlinie/Gruppe32020Iododgraph1 Kopie.png}
     \caption[Iodlinie]{Iodlinie (Ersatzmessung, Gruppe 3, 2020)}
+    \label{fig:IodlinieG32020}
 \end{figure}
 
 %\subsection{Nachprüfen der Absorption}
@@ -17,21 +18,18 @@ Zur Nachprüfung des berechneten Absorptionssignals wurden bei drei Frequenzen m
     OD = \frac{\Delta U}{U_\mathrm{A}} \cdot OD_\mathrm{FPI}
 \end{align}
 Wobei $\Delta U$ die Spannungsdifferenz der Basislinien der Messungen mit und ohne Zelle ist, $U_\mathrm{A}$ die Höhe der einfachen Peaks der Messungen mit der Zelle und $OD_\mathrm{FPI} = 0,09 \pm 0,07$ die optische Dichte des FPI.
-
-
-TODO: Tabelle überarbeiten, Werte ausbessern!!
 \begin{table}[h]
     \centering
-    \begin{tabular}{c|cc|cc}
-        $\omega_m$/MHz & $\Delta U_{Ref}$ / mV & $\Delta U_{Probe}$ / mV & OD/2,22 & OD \\ \hline
-        79,7 & $128 \pm 4$ & $130 \pm 4$ & $0,00 \pm 0,02$ & $0,00 \pm 0,04$ \\
-        491,9 & $268 \pm 4$ & $270 \pm 4$ & $0,003 \pm 0,009$ & $0,007 \pm 0,02$ \\
-        989,1 & $283 \pm 4$ & $320 \pm 4$ & $0,053 \pm 0,008$ & $0,12 \pm 0,02$ \\
+    \begin{tabular}{c|cc|c}
+        $\omega_m$/MHz & $\Delta U$ / mV & $\Delta U_\mathrm{A}$ / mV & OD \\ \hline
+        79,7 & $3 \pm 4$ & $131 \pm 4$ & $0,002 \pm 0,003$  \\
+        491,9 & $150 \pm 4$ & $269 \pm 4$ & $0,05 \pm 0,04$ \\
+        989,1 & $320 \pm 4$ & $283 \pm 4$ & $0,10 \pm 0,08$ \\
     \end{tabular}
     \caption{Ergebnisse für manuelle Messung der optischen Dichte.}
+    \label{tab:ODIod}
 \end{table}
-
-Betrachtet man die Werte aus der obigen Tabelle, für die optische Dichte, so fällt auf, dass diese mit der Frequenz ansteigen. Von 0 bei 79,7 MHz bis ca. 0,05 bei 989,1 MHz. Vergleicht man dies mit der obigen Abbildung der Absorptionslinie für Iod, so stimmen diese im Trend gut überein. Die Letzten zwei Werte weichen jedoch etwas von denen aus der Abbildung ab. Hierzu ist anzumerken, dass die Abbildung von einer anderen Gruppe aus dem Jahr 2020 verwendet wurde, da der Versuchsaufbau nicht einwandfrei funktioniert hat. Inwieweit die Messungen also vergleichbar sind, ist unklar.
+Betrachtet man die Werte aus der Tabelle \ref{tab:ODIod}, für die optische Dichte, so fällt auf, dass diese im Rahmen des Fehlers mit dem in Abbildung \ref{fig:IodlinieG32020} gezeigten werten übereinstimmen. 
 
 Hier wurde mit einem Korrekturfaktor von 2,22 gearbeitet, da unsere Rechteckfunktion aber eher Trapezförmig ist und die Ecken etwas abgerundet sind, weicht der Wert des Faktors wohl etwas nach unten ab.
 
