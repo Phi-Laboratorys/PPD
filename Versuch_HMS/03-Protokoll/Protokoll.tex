@@ -66,47 +66,51 @@ Als nächster Schritt wird die Finesse $F$ bestimmt mit Hilfe von Kapitel \ref{s
 \section{Modulationsindex}
 \label{sec:mindex}
 
-Als Nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfrequenz $\omega_\mathrm{m}$ gemessen. Dabei werden die Werte aus Tab. \ref{tab:mindex} eingestellt und daraus die Höhe aus dem Spektrum mit dem Oszilloskop abgelesen [Abb. \ref{fig:mindex1}, \ref{fig:mindex2}]. Beachte, dass $\omega_\mathrm{m} = 0$\,MHz den ausgeschalteten HF-Generator darstellt. Der Modulationsindex wird gemäß der folgenden Formel berechnet:
+Als Nächstes wird der Modulationsindex $M$ bei unterschiedlichen Modulationsfrequenz $\omega_\mathrm{m}$ gemessen. Dabei werden die Werte aus Tab. \ref{tab:mindex} eingestellt und daraus die Höhe aus dem Spektrum mit dem Oszilloskop abgelesen [Abb. \ref{fig:mindex1}, \ref{fig:mindex2}]. Beachte, dass $\omega_\mathrm{m} = 0$\,MHz den ausgeschalteten HF-Generator darstellt. Da die Messung falsch durchgeführt wurde neue Werte gekennzeichnet $U_\mathrm{corr}$ von anderer Gruppe. Der Modulationsindex wird gemäß der folgenden Formel berechnet:
 \begin{gather}
     M = \frac{1}{2} \sqrt{\frac{U(\omega_\mathrm{m})}{U(\omega_\mathrm{m} = 0)}}
 \end{gather}
+Mittelung ergibt dann für den Modulationsindex:
+\begin{gather}
+    \boxed{\bar{M} = 0,49 \pm 0,01}~.
+\end{gather}
 \begin{center}
     \captionsetup{type=table}
-    \begin{tabular}{r | c c}
-        $\omega_\mathrm{m}$/MHz & $U$/mV & $M$ \\ \hline
-        0    & 346 $\pm$ 5 & --- \\
-        50   & 303 $\pm$ 5 & 0,88 $\pm$ 0,02 \\
-        200  & 294 $\pm$ 5 & 0,86 $\pm$ 0,02 \\
-        400  & 299 $\pm$ 5 & 0,87 $\pm$ 0,02 \\
-        600  & 293 $\pm$ 5 & 0,85 $\pm$ 0,02 \\
-        800  & 309 $\pm$ 5 & 0,90 $\pm$ 0,02 \\
-        1000 & 313 $\pm$ 5 & 0,91 $\pm$ 0,02 \\
-        1200 & 309 $\pm$ 5 & 0,90 $\pm$ 0,02 \\
-        1350 & 314 $\pm$ 5 & 0,91 $\pm$ 0,02 \\
+    \begin{tabular}{r | c | c c}
+        $\omega_\mathrm{m}$/MHz & $U$/mV & $U_\mathrm{corr}$/mV & $M$ \\ \hline
+        0    & 346 $\pm$ 5 & 346,9 $\pm$ 2,0  & --- \\
+        50   & 303 $\pm$ 5 & ~18,5  $\pm$ 2,0 & 0,46 $\pm$ 0,03 \\
+        200  & 294 $\pm$ 5 & ~23,5  $\pm$ 2,0 & 0,52 $\pm$ 0,02 \\
+        400  & 299 $\pm$ 5 & ~21,5  $\pm$ 2,0 & 0,50 $\pm$ 0,02 \\
+        600  & 293 $\pm$ 5 & ~25,1  $\pm$ 2,0 & 0,54 $\pm$ 0,02 \\
+        800  & 309 $\pm$ 5 & ~17,7  $\pm$ 2,0 & 0,46 $\pm$ 0,03 \\
+        1000 & 313 $\pm$ 5 & ~27,7  $\pm$ 2,0 & 0,56 $\pm$ 0,02 \\
+        1200 & 309 $\pm$ 5 & ~17,7  $\pm$ 2,0 & 0,46 $\pm$ 0,03 \\
+        1350 & 314 $\pm$ 5 & ~15,3  $\pm$ 2,0 & 0,42 $\pm$ 0,03 \\
     \end{tabular}
     \captionof{table}{Werte für Modulationsindex $M$}
     \label{tab:mindex}
 \end{center}
+
+\vspace{1cm}
 
 \begin{center}
     \captionsetup{type=figure}
     \begin{tabular}{c c}
         \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_0.jpg} 
         & \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_50.jpg}   \\
-        (a) $\omega_\mathrm{m} = 0$\,Mhz & (b) $\omega_\mathrm{m} = 50$\,Mhz \\[0,3cm]
-        \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_200.jpg} 
-        & \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_400.jpg}  \\
-        (c) $\omega_\mathrm{m} = 200$\,Mhz & (d) $\omega_\mathrm{m} = 400$\,Mhz \\
+        (a) $\omega_\mathrm{m} = 0$\,Mhz & (b) $\omega_\mathrm{m} = 50$\,Mhz
     \end{tabular}
     \captionof{figure}{Messung Modulationsindex $M$}
     \label{fig:mindex1}
 \end{center}
 
-\newpage
-
 \begin{center}
     \captionsetup{type=figure}
     \begin{tabular}{c c}
+        \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_200.jpg} 
+        & \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_400.jpg}  \\
+        (c) $\omega_\mathrm{m} = 200$\,Mhz & (d) $\omega_\mathrm{m} = 400$\,Mhz \\[0,3cm]
         \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_600.jpg} 
         & \includegraphics[width=0.42\textwidth]{Bilder/Modulationsindex/mindex_800.jpg} \\
         (e) $\omega_\mathrm{m} = 600$\,Mhz & (f) $\omega_\mathrm{m} = 800$\,Mhz \\[0,3cm]

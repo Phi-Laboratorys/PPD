@@ -6,22 +6,25 @@
 \subsection{Vergleich der Spektrumanalysatorwerte}
 \label{sub:specAnalVergleich}
 
-Zuerst wird die Theorie mit der Praxis verglichen. Dafür werden die Werte dem Spektrumanalysator mit den gemessenen Werten aus Kapitel \ref{sub:verluste} [Tab. \ref{tab:specAnal}] zu den theoretischen Werten aus Kapitel \ref{sec:signalAbsorp} in Kontrast gesetzt. Dafür wird für $P^*_\mathrm{S,Theo} = -22$\,dBm und für $P^*_\mathrm{R,Theo}= -77$\,dBm ($P^*_\mathrm{R,Theo} = P^*_\mathrm{S,Theo} - 55\,\mathrm{dB}$), wobei die 55\,dB die Leistungsverstärkung des HF-Verstärkers ist. In Abbildung \ref{fig:specAnalVergleich} lässt sich erkennen, im Bereich der gemessenen Werte liegen nur vereinzelt bei niedrigen Frequenzen für die Modulationsfrequenz $\omega_\mathrm{m}$ leicht niedrigere Werte, was aber gut mit dem Ablesefehler der Werte vom Spektrumanalysator zusammenhängen kann.
+Zuerst wird die Theorie mit der Praxis verglichen. Dafür werden die Werte dem Spektrumanalysator mit den gemessenen Werten aus Kapitel \ref{sub:verluste} [Tab. \ref{tab:specAnal}] zu den theoretischen Werten mit $P^*_\mathrm{S,Theo} = -30$\,dBm und für $P^*_\mathrm{R,Theo}= -79$\,dBm aus Kapitel \ref{sec:rauschen} \& \ref{sec:signalAbsorp} in Kontrast gesetzt. In Abbildung \ref{fig:specAnalVergleich} lässt sich erkennen, im Bereich der gemessenen Werte liegen für die Modulationsfrequenz $\omega_\mathrm{m}$ liegen alle Werte im Bereich der Erwartung in der Nähe der theoretischen Werte. Der Mittelwert der gemessenen Werte es dabei:
+\begin{gather}
+    \boxed{\bar{P}^*_\mathrm{S,Mess} = (-23 \pm 1)\,\mathrm{dBm}} \qquad \boxed{\bar{P}^*_\mathrm{R,Mess} = (-78 \pm 1)\,\mathrm{dBm}}~.
+\end{gather}
 \begin{center}
     \captionsetup{type=figure}
-    \includegraphics[scale=0.35]{Bilder/Auswertung/62/Signal-Rausch.pdf}
-    \captionof{figure}{Vergleich zwischen Theorie und Praxis für gemessene Werte am Spekturmanalysator mit $P^*_\mathrm{R,Theo}$ = -77\,dBm und $P^*_\mathrm{S,Theo}$= -22\,dBm, sowie Vergleich zwischen $P^*_\mathrm{S,Mess}$ und $P^* _\mathrm{I}$}
+    \includegraphics[scale=0.4]{Bilder/Auswertung/62/Signal-Rausch.pdf}
+    \captionof{figure}{Vergleich zwischen Theorie und Praxis für gemessene Werte am Spektrumanalysator mit dem theoretischen Leistungswert des Rauschens \\$P^*_\mathrm{R,Theo}$ = -79\,dBm und des Signals $P^*_\mathrm{S,Theo}$= -30\,dBm, sowie Vergleich zwischen gemessene Leistung mit Mischer $P^*_\mathrm{S,Mess}$ und ohne Mischer $P^* _\mathrm{I}$}
     \label{fig:specAnalVergleich}
 \end{center}
 
 \subsection{Konversionsverluste}
 \label{sub:konversionsverluste}
 
-Nun werden die Werte des Spekturmanalysators, welches die Werte nach HF-Verstärker am R-Eingang des Mischer gemessen hat, mit den Werten nach dem NF-Verstärkers zu vergleichen. Dafür werden die Werte in Tabelle \ref{tab:verluste} durch den Faktor 31,5 geteilt (aus Skript entnommen) um die Spannung $U_\mathrm{I}$ vor den NF-Verstärkers zu erhalten. Danach wird angenommen, dass der Mischer ohne Konversionsverluste arbeitet, d.h. Eingang L und R haben keine Phasendifferenz, womit der Spannung am Ausgang I gleich der Spannung am Ausgang R ist, also $U_\mathrm{R} = U_\mathrm{I}$. Diese Spannung wird dann durch die Formel:
+Nun werden die Werte des Spektrumanalysators, welches die Werte nach HF-Verstärker am R-Eingang des Mischer gemessen hat, mit den Werten nach dem NF-Verstärkers zu vergleichen. Dafür werden die Werte in Tabelle \ref{tab:verluste} durch den Faktor 31,5 geteilt (aus Skript entnommen) um die Spannung $U_\mathrm{I}$ vor den NF-Verstärkers zu erhalten. Danach wird angenommen, dass der Mischer ohne Konversionsverluste arbeitet, d.h. Eingang L und R haben keine Phasendifferenz, womit der Spannung am Ausgang I gleich der Spannung am Ausgang R ist, also $U_\mathrm{R} = U_\mathrm{I}$. Diese Spannung wird dann durch die Formel:
 \begin{gather}
-    P^*_\mathrm{I} = 10\cdot\log_{10}\left(\frac{U_\mathrm{I}^2}{2R}\cdot1000\right);~~[P^*] = 1\,\mathrm{dBm}
+    P^*_\mathrm{I} = 10\cdot\log_{10}\left(\frac{U_\mathrm{I}^2}{2R}\right);~~[P^*] = 1\,\mathrm{dBm}
 \end{gather}
-in den gesuchten HF-Leistungswerte umgerechnet. \cite{anleitung} Beachte hierbei, dass der Widerstand $R=50\,\Omega$ \cite{anleitung} ist und der Faktor 1000 im Logarithmus die Umrechnung von 1\,W auf 1\,mW notwendig ist, um als Einheit für $P^*$ 1\,dBm zu erhalten. Der Vergleich zwischen $P^*_\mathrm{I}$ und $P^*_\mathrm{S,Mess}$ wurde grafisch in Abb. \ref{fig:specAnalVergleich} dargestellt. Eine skizzenhafte Darstellung des Schaltplans zur Übersicht ist in Abbildung \ref{fig:schaltschema} gegeben. 
+in den gesuchten HF-Leistungswerte ohne Mischer $P_\mathrm{I}^*$ umgerechnet. \cite{anleitung} Beachte hierbei, dass der Widerstand $R=50\,\Omega$ \cite{anleitung} ist und dass auf $P_\mathrm{I}^*$ 6\,dBm dazuaddiert wurde um den Vergleich zwischen $P_\mathrm{S,Mess}^*$ zu gewährleisten. Alle berechneten Werte kann man in Tabelle \ref{tab:konversionsverluste} finden. Der Vergleich zwischen $P^*_\mathrm{I}$ und $P^*_\mathrm{S,Mess}$ wurde grafisch in Abb. \ref{fig:specAnalVergleich} dargestellt, wobei der Fehler weg gelassen wurde da dieser sehr klein ist. Eine skizzenhafte Darstellung des Schaltplans zur Übersicht ist in Abbildung \ref{fig:schaltschema} gegeben. 
 
 \begin{center}
     \captionsetup{type=figure}
@@ -30,26 +33,30 @@ in den gesuchten HF-Leistungswerte umgerechnet. \cite{anleitung} Beachte hierbei
     \label{fig:schaltschema}
 \end{center}
 
-Um dann die konkreten Konversionsverluste zu ermitteln wird der Abstand zwischen $P^*_\mathrm{I}$ und $P^*_\mathrm{S,Mess}$ HF-Leistungswerte berechnet und der Mittelwert gebildet sowie die Standardabweichung. Dafür wird die Größe $v = |P^*_\mathrm{I} - P^*_\mathrm{S,Mess}|$ als Konversionsverlust eingeführt. Alles zusammen wird in Tabelle \ref{tab:konversionsverluste} dargestellt und die jeweiligen Fehler mit dem Fehlerfortpflanzungsgesetz berechnet. Die Berechnungen ergeben folgendes Ergebnis für den Konversionsverlust $v$:
+Mittelung über die Ergebnisse ergibt dann:
 \begin{gather}
-    \boxed{v = (11 \pm 6)\,\mathrm{dBm}}~.
+    \boxed{\bar{P}_\mathrm{I}^* = (- 21,3 \pm 0,2)\,\mathrm{dBm}}~.
 \end{gather}
-Dies bedeutet, dass beim Mischen des Eingangsignals im Vergleich zum gemessenen Leistungspegel $P^*_\mathrm{S,Mess}$ ein Verlust von ungefähr die Hälfte des gemessenen Leistungspegels $P^*_\mathrm{S,Mess}$ auftritt. Weiterhin ist in Tabelle \ref{tab:konversionsverluste} zu erkennen, dass die mit steigender Modulationsfrequenz $\omega_\mathrm{m}$ der Konversionsverlust $v$ zunimmt.
+
+Um dann die konkreten Konversionsverluste zu ermitteln wird der Abstand zwischen $\bar{P}^*_\mathrm{I}$ und $\bar{P}^*_\mathrm{S,Mess}$ HF-Leistungswerte berechnet und der Mittelwert gebildet sowie die Standardabweichung. Dafür wird die Größe $v = |\bar{P}^*_\mathrm{I} - \bar{P}^*_\mathrm{S,Mess}|$ als Konversionsverlust eingeführt. Die Berechnungen ergeben folgendes Ergebnis für den Konversionsverlust $v$:
+\begin{gather}
+    \boxed{v = (2 \pm 1)\,\mathrm{dBm}}~.
+\end{gather}
 
 \begin{center}
     \captionsetup{type=table}
-    \begin{tabular}{r | c r | c c | r }
-        $\omega_\mathrm{m}$/MHz & $U$/mV & $U_\mathrm{I}$/mV & $P_\mathrm{I}$/mW & $P^*_\mathrm{I}$/dBm & $v$/dBm\\ \hline
-        54,5   & 208 $\pm$ 5 & 6,6  $\pm$ 0.2 &  436 $\pm$ 26 & -26 $\pm$ 14 &  4\\
-        188,5  & 293 $\pm$ 5 & 9,3  $\pm$ 0.2 &  865 $\pm$ 37 & -29 $\pm$ 16 &  1\\
-        409,2  & 421 $\pm$ 5 & 13,4 $\pm$ 0.2 & 1796 $\pm$ 54 & -33 $\pm$ 17 & 10\\
-        629,1  & 511 $\pm$ 5 & 16,2 $\pm$ 0.2 & 2624 $\pm$ 65 & -34 $\pm$ 18 & 14\\
-        824,1  & 452 $\pm$ 5 & 14,3 $\pm$ 0.2 & 2045 $\pm$ 57 & -33 $\pm$ 18 & 12\\
-        989,0  & 533 $\pm$ 5 & 16,9 $\pm$ 0.2 & 2856 $\pm$ 68 & -35 $\pm$ 18 & 15\\
-        1235,1 & 635 $\pm$ 5 & 20,2 $\pm$ 0.2 & 4080 $\pm$ 81 & -36 $\pm$ 19 & 17\\
-        1344,5 & 572 $\pm$ 5 & 18,2 $\pm$ 0.2 & 3312 $\pm$ 73 & -35 $\pm$ 19 & 17\\
+    \begin{tabular}{r | c r | c c }
+        $\omega_\mathrm{m}$/MHz & $U$/mV & $U_\mathrm{I}$/mV & $P_\mathrm{I}$/$10^{-4}$\,mW & $P^*_\mathrm{I}$/dBm \\ \hline
+        54,5   & 208 $\pm$ 5 & 6,6  $\pm$ 0,2 & ~4,4 $\pm$ 0,3 & -27,6 $\pm$ 1,9 \\
+        188,5  & 293 $\pm$ 5 & 9,3  $\pm$ 0,2 & ~8,6 $\pm$ 0,4 & -24,6 $\pm$ 1,1 \\
+        409,2  & 421 $\pm$ 5 & 13,4 $\pm$ 0,2 & 18,0 $\pm$ 0,5 & -21,5 $\pm$ 0,6 \\
+        629,1  & 511 $\pm$ 5 & 16,2 $\pm$ 0,2 & 26,2 $\pm$ 0,6 & -19,8 $\pm$ 0,5 \\
+        824,1  & 452 $\pm$ 5 & 14,3 $\pm$ 0,2 & 20,4 $\pm$ 0,6 & -20,9 $\pm$ 0,6 \\
+        989,0  & 533 $\pm$ 5 & 16,9 $\pm$ 0,2 & 28,6 $\pm$ 0,7 & -19,4 $\pm$ 0,5 \\
+        1235,1 & 635 $\pm$ 5 & 20,2 $\pm$ 0,2 & 40,8 $\pm$ 0,8 & -17,9 $\pm$ 0,4 \\
+        1344,5 & 572 $\pm$ 5 & 18,2 $\pm$ 0,2 & 33,1 $\pm$ 0,7 & -18,8 $\pm$ 0,4 \\
     \end{tabular}
-    \captionof{table}{Berechnete Werte für Konversionsverluste}
+    \captionof{table}{Berechnete Werte für Konversionsverluste mit der gemessenen Spanung $U$, der Spannung $U_\mathrm{I}$ am Ausgang I und die dazugehörge Leistung $P_\mathrm{I}$ in mW und dBm}
     \label{tab:konversionsverluste}
 \end{center}
 
@@ -58,71 +65,89 @@ Dies bedeutet, dass beim Mischen des Eingangsignals im Vergleich zum gemessenen 
 \subsection{Effektive Quantenausbeute}
 \label{sub:ausbeute}
 
-Im nächsten Abschnitt wird die Quantenausbeute $\beta_\mathrm{D}$ berechnet. Dafür wird Gleichung (\ref{eq:leistungPhotosignal}) aus Kapitel \ref{sec:signalRausch} verwendet, welche hier nur nochmal aufgeführt und auf die Quantenausbeute $\beta_\mathrm{D}$ umgestellt wird:
+Im nächsten Abschnitt wird die Quantenausbeute $\beta_\mathrm{D}$ berechnet. Dafür wird Gleichung (\ref{eq:leistungPhotosignal}) aus Kapitel \ref{sec:signalRausch} verwendet und auf die Quantenausbeute $\beta_\mathrm{D}$ umgestellt wird:
 \begin{gather}
-    P_\mathrm{S,Mess} = \frac{1}{\sqrt{2}}\frac{\beta_\mathrm{D}}{2} P M \frac{\ln10}{2} \mathrm{OD}\\[0,5cm]
-    \Leftrightarrow \beta_\mathrm{D} = \frac{4\sqrt{2}}{\ln10}\cdot\frac{P_\mathrm{S,Mess}}{P\cdot M}\cdot\frac{1}{\mathrm{OD}}~.
+    P_\mathrm{S} = \frac{R}{2}\left(\frac{e\beta_\mathrm{D}}{2hc}\lambda P M \frac{\ln10}{2}\mathrm{OD}\right)^2
+    \quad \Leftrightarrow \quad \beta_\mathrm{D} = \underbrace{\sqrt{\frac{1}{\frac{R}{2}\left(\frac{e\beta_\mathrm{D}}{2hc}\lambda P\frac{\ln10}{2}\right)^2}}}_{C} \cdot \frac{\sqrt{P_\mathrm{S}}}{\mathrm{OD}\cdot M}
 \end{gather}
-Als HF-Leistungswerte $P^*_\mathrm{S,Mess}$ werden die gemessene Werte aus Kapitel \ref{sub:specAnal} verwendet. Die optische Dichte OD ist in Kapitel \ref{sub:opDichte} als OD = 0,09 $\pm$ 0,07 gegeben. Weiterhin ist der Modulationsindex $M$ zu jeder Modulationsfrequenz $\omega_\mathrm{m}$ in Kapitel \ref{sec:mindex} zu finden. Die Lichtleistung $P$ der Photodiode ist im Skript gegeben mit 0,135\,mW. Zuerst müssen die Leistungswerte $P^*_\mathrm{S,Mess}$ in mW umgerechnet werden, dafür wird der Verstärkungsfaktor von 55\,dB auf $P^*_\mathrm{S,Mess}$ addiert und dann mit der Formel:
+Als Leistungswerte $P_\mathrm{S}$ werden die gemessenen Werte $P^*_\mathrm{S,Mess}$ aus Kapitel \ref{sub:specAnal} verwendet. Die optische Dichte OD ist in Kapitel \ref{sub:opDichte} als OD = 0,09 $\pm$ 0,07 gegeben. Weiterhin ist der Modulationsindex $M$ zu jeder Modulationsfrequenz $\omega_\mathrm{m}$ in Kapitel \ref{sec:mindex} zu finden. Für die Konstante $C$ gilt mit den Werten aus dem Skript \cite{anleitung} (auch in Kapitel \ref{sec:signalAbsorp} gegeben):
 \begin{gather}
-    P^* = 10\log_{10}(P) \Leftrightarrow P = 10^{P^*/10}
+    C= 6807\,\sqrt{\mathrm{W}}~.
+\end{gather}
+Zuerst müssen die Leistungswerte $P^*_\mathrm{S,Mess}$ in mW umgerechnet werden, dafür wird der Verstärkungsfaktor von 55\,dB von $P^*_\mathrm{S,Mess}$ subtrahiert und dann mit der Formel:
+\begin{gather}
+    P^* = 10\log_{10}(P) \qquad \Leftrightarrow \qquad P = 10^{P^*/10}
     \label{eq:dBmTomW}
 \end{gather}
-umgerechnet. \cite{anleitung} Dabei ist $P^*$ der Leistungspegel in dBm und $P$ der Leistungspegel in mW. Tabelle \ref{tab:ausbeute} fasst nochmal alle Werte an einer Stelle zusammen, sowie die errechneten Werte für die Quantenausbeute $\beta_\mathrm{D}$. Messfehler wurden mit dem Fehlerfortpflanzungsgesetz berechnet. In Tabelle \ref{tab:ausbeute} lässt sich bei niedrigen Modulationsfrequenzen eine hohe Quantenausbeute $\beta_\mathrm{D}$ erkennen, aber auch einen sehr großen Messfehler aufgrund der deutlich höheren Leistungswerte. Zudem muss einem klar sein, dass aufgrund der Umrechnung mit Basis 10 schon bei kleinen Ablesefehler große Unterschiede entstehen. Betrachtet man den Mittelwert der Quantenausbeute $\beta_\mathrm{D}$ erhält man als Ergebnis:
+umgerechnet. \cite{anleitung} Dabei ist $P^*$ der Leistungspegel in dBm und $P$ der Leistungspegel in mW. 
+Tabelle \ref{tab:ausbeute} fasst nochmal alle Werte an einer Stelle zusammen, sowie die errechneten Werte für die Quantenausbeute $\beta_\mathrm{D}$. Messfehler wurden mit dem Fehlerfortpflanzungsgesetz berechnet. In Tabelle \ref{tab:ausbeute} lässt sich bei hohe Modulationsfrequenzen eine hohe Quantenausbeute $\beta_\mathrm{D}$ erkennen, aber auch einen sehr großen Messfehler aufgrund der deutlich höheren Leistungswerte. Dennoch lässt sich sagen, dass für niedrige Modulationsfrequenzen $\omega_\mathrm{m}$ die Quantenausbeute mit den Erwartungen übereinstimmt. Betrachtet man den Mittelwert der Quantenausbeute $\beta_\mathrm{D}$ erhält man als Ergebnis:
 \begin{gather}
-    \boxed{\beta_\mathrm{D} = 0,25 \pm 0,20}~.
+    \boxed{\beta_\mathrm{D} = 0,73 \pm 0,22}~,
 \end{gather}
+was ein Stück über den Erwartungen liegt, was aber auch mit einen systematischen Messfehler für Modulationsfrequenzen 400~1350\,MHz zu tun haben könnte.
 Eine herkömmliche Silizium-Photodiode erreicht heutzutage eine Quantenausbeute von 80\,\%, wobei schon mit sogenannten schwarzen Silizium eine Quantenausbeute von 130\,\% gelungen ist. \cite{siPD} Dies lässt darauf schließen, dass die gemessenen Werte noch in der Erwartung der Realität liegen.
 \begin{center}
     \captionsetup{type=table}
     \begin{tabular}{r | c c | c c}
-        $\omega_\mathrm{m}$/MHz & $P^*_\mathrm{S,Mess}$/dBm & $P_\mathrm{S,Mess}$/mW & $M$ & $\beta_\mathrm{D}$\\ \hline
-        50   & -30 $\pm$ 3 & 0,00316 $\pm$ 0,00063 & 0,88 $\pm$ 0,02 & 0,73 $\pm$ 0,59 \\
-        200  & -30 $\pm$ 3 & 0,00316 $\pm$ 0,00063 & 0,86 $\pm$ 0,02 & 0,74 $\pm$ 0,59 \\
-        400  & -23 $\pm$ 3 & 0,00063 $\pm$ 0,00013 & 0,87 $\pm$ 0,02 & 0,15 $\pm$ 0,12 \\
-        600  & -20 $\pm$ 3 & 0,00032 $\pm$ 0,00006 & 0,85 $\pm$ 0,02 & 0,08 $\pm$ 0,06 \\
-        800  & -21 $\pm$ 3 & 0,00040 $\pm$ 0,00008 & 0,90 $\pm$ 0,02 & 0,09 $\pm$ 0,07 \\
-        1000 & -20 $\pm$ 3 & 0,00032 $\pm$ 0,00006 & 0,91 $\pm$ 0,02 & 0,07 $\pm$ 0,06 \\
-        1200 & -19 $\pm$ 3 & 0,00025 $\pm$ 0,00005 & 0,90 $\pm$ 0,02 & 0,06 $\pm$ 0,05 \\
-        1350 & -18 $\pm$ 3 & 0,00020 $\pm$ 0,00004 & 0,91 $\pm$ 0,02 & 0,04 $\pm$ 0,03 \\
+        $\omega_\mathrm{m}$/MHz & $P^*_\mathrm{S,Mess}$/dBm & $P_\mathrm{S,Mess}$/$10^{-9}$\,mW & $M$ & $\beta_\mathrm{D}$\\ \hline
+        50   & -85 $\pm$ 3 & ~3,16 $\pm$ 0.11 & 0,46 $\pm$ 0,03 & 0.29 $\pm$ 0.23 \\
+        200  & -85 $\pm$ 3 & ~3,16 $\pm$ 0.11 & 0,52 $\pm$ 0,02 & 0.26 $\pm$ 0.20 \\
+        400  & -78 $\pm$ 3 & 15,85 $\pm$ 0.61 & 0,50 $\pm$ 0,02 & 0.60 $\pm$ 0.47 \\
+        600  & -75 $\pm$ 3 & 31,62 $\pm$ 1.26 & 0,54 $\pm$ 0,02 & 0.79 $\pm$ 0.62 \\
+        800  & -76 $\pm$ 3 & 25,12 $\pm$ 0.99 & 0,46 $\pm$ 0,03 & 0.82 $\pm$ 0.64 \\
+        1000 & -75 $\pm$ 3 & 31,62 $\pm$ 1.26 & 0,56 $\pm$ 0,02 & 0.76 $\pm$ 0.59 \\
+        1200 & -74 $\pm$ 3 & 39,81 $\pm$ 1.61 & 0,46 $\pm$ 0,03 & 1.04 $\pm$ 0.81 \\
+        1350 & -73 $\pm$ 3 & 50,12 $\pm$ 2.06 & 0,42 $\pm$ 0,03 & 1.27 $\pm$ 0.99 \\
     \end{tabular}
-    \captionof{table}{Berechnete Werte für Quantenausbeute}
+    \captionof{table}{Berechnete Werte für Quantenausbeute $\beta_\mathrm{D}$ mit den Leistungsweren des Signals $P_\mathrm{S}$ und den Modulatuionsindex $M$}
     \label{tab:ausbeute}
 \end{center}
+
+
+
+
+
+
+
+
+
 
 \subsection{Minimale optische Dichte}
 \label{sub:minopDichte}
 
-Um die minimale optische Dichte $\mathrm{OD}_\mathrm{min}$ der Messaperatur zu erhalten wird die gemessenen Leistungswerte für das thermische Rauschen $P_\mathrm{R,Mess}$ in die Gleichung (\ref{eq:leistungPhotosignal}) eingesetzt. Dann wird das Verhältnis aus den gemessenen Leistungswerte des Photstromsignals $P_\mathrm{S,Mess}$ gebildet. Dies ergbit dann das Ergebnis:
+Um die minimale optische Dichte $\mathrm{OD}_\mathrm{min}$ der Messaperatur zu erhalten wird die Gleichung des thermischen Rauschens $P_\mathrm{T}$ mit der Gleichung (\ref{eq:leistungPhotosignal}) für die Lichtleistung $P_\mathrm{S}$ gleichgesetzt, dabei ist OD dann die minimale optische Dichte $\mathrm{OD}_\mathrm{min}$. Dies Überlegung hat dann dieses Ergebnis zur Folge:
 \begin{gather}
-    \frac{P_\mathrm{S,Mess}}{P_\mathrm{R,Mess}} = \frac{\mathrm{OD}}{\mathrm{OD}_\mathrm{min}} \qquad \Leftrightarrow \qquad \mathrm{OD}_\mathrm{min} = \frac{P_\mathrm{R,Mess}}{P_\mathrm{S,Mess}} \cdot \mathrm{OD}~,
+    P_\mathrm{T} = 4 k_\mathrm{B} T \Delta \nu = \frac{R}{2}\left(\frac{e\beta_\mathrm{D}}{2hc}\lambda P M \frac{\ln10}{2}\right)^2 \mathrm{OD}_\mathrm{min}  = P_\mathrm{S}~.
+    \label{eq:signaleqrausch}
+\end{gather}
+Wenn man sich in Gleichung (\ref{eq:signaleqrausch}) den Term vor der minimalen optischen Dichte $\mathrm{OD}_\mathrm{min}$ genauer betrachtet, erkennt man, dass dieser Term wiederum in Gleichung (\ref{eq:leistungPhotosignal}) und das Verhältnis zwischen Lichtleistung $P_\mathrm{S}$ und optischer Dichte im Quadrat darstellt, also $P_\mathrm{S}/\mathrm{OD}^2$. Setzt man dies nun in Gleichung (\ref{eq:signaleqrausch}) ein und formt auf $\mathrm{OD}_\mathrm{min}$ um, erhält man:
+\begin{gather}
+    \Rightarrow \qquad \boxed{\mathrm{OD}_\mathrm{min} = \sqrt{\frac{P_\mathrm{T}}{P_\mathrm{S}}} \cdot \mathrm{OD}}~,
     \label{eq:minopDichte}
 \end{gather}
-wobei $\mathrm{OD}$ die gemessene optische Dichte mit $0,09 \pm 0,07$ aus Kapitel \ref{sub:opDichte} ist. Die Leistungswerte werden in mW umgerechnet, dafür wird Gleichung (\ref{eq:dBmTomW}) in Gleichung (\ref{eq:minopDichte}) eingesetzt folgt daraus:
+wobei $\mathrm{OD}$ die gemessene optische Dichte mit $0,09 \pm 0,07$ aus Kapitel \ref{sub:opDichte} ist. Als Leistungswerte $P_\mathrm{T}$ und $P_\mathrm{S}$ werden die berechneten Werte aus Kapitel \ref{sec:rauschen} ($P_\mathrm{R,Theo}$) und \ref{sec:signalAbsorp} ($P_\mathrm{S,Theo}$)  verwendet. Dabei wird aber der Wert von $P_\mathrm{R,Theo}$ durch 4 gerechnet \cite{anleitung}, da die Formel für $P_\mathrm{s,Theo}$ schon für die gemessenen Werte angepasst wurde. Die Fehler wieder mit dem Fehlerfortpflanzungsgesetz ermittelt und damit folgt für die minimale optische Dichte:
 \begin{gather}
-    \mathrm{OD}_\mathrm{min} = 10^{(P^*_\mathrm{R,Mess} - P^*_\mathrm{S,Mess})/10} \cdot \mathrm{OD} = 10^{\Delta P^*/10} \cdot \mathrm{OD}~.
-\end{gather}
-Die Fehler wieder mit dem Fehlerfortpflanzungsgesetz ermittelt und ergbit sich folgende Werte in Tabelle \ref{tab:minopDichte}. Damit folgt durch Mittelwertbildung für die minimale optische Dichte:
-\begin{gather}
-    \boxed{\mathrm{OD}_\mathrm{min} = (0.35 \pm 0.43) \cdot 10^{-6}}~.
+    \boxed{\mathrm{OD}_\mathrm{min} = (3,25 \pm 2,53) \cdot 10^{-4}}~.
 \end{gather}
 
-\begin{center}
-    \captionsetup{type=table}
-    \begin{tabular}{r | c c c | c}
-        $\omega_\mathrm{m}$/MHz & $P^*_\mathrm{S,Mess}$/dBm & $P^*_\mathrm{R,Mess}$/mW & $\Delta P^*$/dBm & $ \mathrm{OD}_\mathrm{min} \cdot 10^{-6}$ \\ \hline
-        50   & -30 $\pm$ 3 & -80 $\pm$ 3 & -50 $\pm$ 4 & 0.90 $\pm$ 1.08 \\
-        200  & -30 $\pm$ 3 & -80 $\pm$ 3 & -50 $\pm$ 4 & 0.90 $\pm$ 1.08 \\
-        400  & -23 $\pm$ 3 & -80 $\pm$ 3 & -57 $\pm$ 4 & 0.18 $\pm$ 0.22 \\
-        600  & -20 $\pm$ 3 & -77 $\pm$ 3 & -57 $\pm$ 4 & 0.18 $\pm$ 0.22 \\
-        800  & -21 $\pm$ 3 & -77 $\pm$ 3 & -56 $\pm$ 4 & 0.23 $\pm$ 0.27 \\
-        1000 & -20 $\pm$ 3 & -77 $\pm$ 3 & -57 $\pm$ 4 & 0.18 $\pm$ 0.22 \\
-        1200 & -19 $\pm$ 3 & -77 $\pm$ 3 & -58 $\pm$ 4 & 0.14 $\pm$ 0.17 \\
-        1350 & -18 $\pm$ 3 & -77 $\pm$ 3 & -59 $\pm$ 4 & 0.11 $\pm$ 0.14 \\
-    \end{tabular}
-    \captionof{table}{Berechnete Werte für minimale optische Dichte}
-    \label{tab:minopDichte}
-\end{center}
+5 10e-4 3,16 e10-9
+
+%\begin{center}
+%    \captionsetup{type=table}
+%    \begin{tabular}{r | c c c | c}
+%        $\omega_\mathrm{m}$/MHz & $P^*_\mathrm{S,Mess}$/dBm & $P^*_\mathrm{R,Mess}$/mW & $\Delta P^*$/dBm & $ \mathrm{OD}_\mathrm{min} \cdot 10^{-6}$ \\ \hline
+%        50   & -30 $\pm$ 3 & -80 $\pm$ 3 & -50 $\pm$ 4 & 0.90 $\pm$ 1.08 \\
+%        200  & -30 $\pm$ 3 & -80 $\pm$ 3 & -50 $\pm$ 4 & 0.90 $\pm$ 1.08 \\
+%        400  & -23 $\pm$ 3 & -80 $\pm$ 3 & -57 $\pm$ 4 & 0.18 $\pm$ 0.22 \\
+%        600  & -20 $\pm$ 3 & -77 $\pm$ 3 & -57 $\pm$ 4 & 0.18 $\pm$ 0.22 \\
+%        800  & -21 $\pm$ 3 & -77 $\pm$ 3 & -56 $\pm$ 4 & 0.23 $\pm$ 0.27 \\
+%        1000 & -20 $\pm$ 3 & -77 $\pm$ 3 & -57 $\pm$ 4 & 0.18 $\pm$ 0.22 \\
+%        1200 & -19 $\pm$ 3 & -77 $\pm$ 3 & -58 $\pm$ 4 & 0.14 $\pm$ 0.17 \\
+%        1350 & -18 $\pm$ 3 & -77 $\pm$ 3 & -59 $\pm$ 4 & 0.11 $\pm$ 0.14 \\
+%    \end{tabular}
+%    \captionof{table}{Berechnete Werte für minimale optische Dichte}
+%    \label{tab:minopDichte}
+%\end{center}
 
 
 
