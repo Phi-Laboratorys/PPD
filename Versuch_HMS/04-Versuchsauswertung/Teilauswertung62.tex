@@ -6,32 +6,28 @@
 \subsection{Vergleich der Spektrumanalysatorwerte}
 \label{sub:specAnalVergleich}
 
-Zuerst wird die Theorie mit der Praxis verglichen. Dafür werden die Werte dem Spektrumanalysator mit den gemessenen Werten aus Kapitel \ref{sub:verluste} [Tab. \ref{tab:specAnal}] zu den theoretischen Werten mit $P^*_\mathrm{S,Theo} = -30$\,dBm und für $P^*_\mathrm{R,Theo}= -79$\,dBm aus Kapitel \ref{sec:rauschen} \& \ref{sec:signalAbsorp} in Kontrast gesetzt. In Abbildung \ref{fig:specAnalVergleich} lässt sich erkennen, im Bereich der gemessenen Werte liegen für die Modulationsfrequenz $\omega_\mathrm{m}$ liegen alle Werte im Bereich der Erwartung in der Nähe der theoretischen Werte. Der Mittelwert der gemessenen Werte es dabei:
+Zuerst wird die Theorie mit der Praxis verglichen. Dafür werden die gemessenen Werte des Spektrumanalysators aus Kapitel \ref{sub:verluste} [Tab. \ref{tab:specAnal}] zu den theoretischen Werten mit $P^*_\mathrm{S,Theo} = -30$\,dBm und für $P^*_\mathrm{R,Theo}= -79$\,dBm aus Kapitel \ref{sec:rauschen} \& \ref{sec:signalAbsorp} in Kontrast gesetzt. In Abbildung \ref{fig:specAnalVergleich} lässt sich erkennen, dass für die gemessenen Modulationsfrequenz $\omega_\mathrm{m}$ alle Leistungswerte im Bereich der Erwartung, in der Nähe der theoretischen Werte, liegen. Nur Werte für Modulationsfrequenzen von 400 $\sim$ 1350\,MHz weichen von der Theorie ab, was aber mit einem systematischen Messfehler zusammenhängen kann. Der Mittelwert der gemessenen Werte ist dabei:
 \begin{gather}
     \boxed{\bar{P}^*_\mathrm{S,Mess} = (-23 \pm 1)\,\mathrm{dBm}} \qquad \boxed{\bar{P}^*_\mathrm{R,Mess} = (-78 \pm 1)\,\mathrm{dBm}}~.
 \end{gather}
-\begin{center}
-    \captionsetup{type=figure}
-    \includegraphics[scale=0.4]{Bilder/Auswertung/62/Signal-Rausch.pdf}
-    \captionof{figure}{Vergleich zwischen Theorie und Praxis für gemessene Werte am Spektrumanalysator mit dem theoretischen Leistungswert des Rauschens \\$P^*_\mathrm{R,Theo}$ = -79\,dBm und des Signals $P^*_\mathrm{S,Theo}$= -30\,dBm, sowie Vergleich zwischen gemessene Leistung mit Mischer $P^*_\mathrm{S,Mess}$ und ohne Mischer $P^* _\mathrm{I}$}
-    \label{fig:specAnalVergleich}
-\end{center}
 
 \subsection{Konversionsverluste}
 \label{sub:konversionsverluste}
 
-Nun werden die Werte des Spektrumanalysators, welches die Werte nach HF-Verstärker am R-Eingang des Mischer gemessen hat, mit den Werten nach dem NF-Verstärkers zu vergleichen. Dafür werden die Werte in Tabelle \ref{tab:verluste} durch den Faktor 31,5 geteilt (aus Skript entnommen) um die Spannung $U_\mathrm{I}$ vor den NF-Verstärkers zu erhalten. Danach wird angenommen, dass der Mischer ohne Konversionsverluste arbeitet, d.h. Eingang L und R haben keine Phasendifferenz, womit der Spannung am Ausgang I gleich der Spannung am Ausgang R ist, also $U_\mathrm{R} = U_\mathrm{I}$. Diese Spannung wird dann durch die Formel:
-\begin{gather}
-    P^*_\mathrm{I} = 10\cdot\log_{10}\left(\frac{U_\mathrm{I}^2}{2R}\right);~~[P^*] = 1\,\mathrm{dBm}
-\end{gather}
-in den gesuchten HF-Leistungswerte ohne Mischer $P_\mathrm{I}^*$ umgerechnet. \cite{anleitung} Beachte hierbei, dass der Widerstand $R=50\,\Omega$ \cite{anleitung} ist und dass auf $P_\mathrm{I}^*$ 6\,dBm dazuaddiert wurde um den Vergleich zwischen $P_\mathrm{S,Mess}^*$ zu gewährleisten. Alle berechneten Werte kann man in Tabelle \ref{tab:konversionsverluste} finden. Der Vergleich zwischen $P^*_\mathrm{I}$ und $P^*_\mathrm{S,Mess}$ wurde grafisch in Abb. \ref{fig:specAnalVergleich} dargestellt, wobei der Fehler weg gelassen wurde da dieser sehr klein ist. Eine skizzenhafte Darstellung des Schaltplans zur Übersicht ist in Abbildung \ref{fig:schaltschema} gegeben. 
+Nun werden die Werte des Spektrumanalysators, welcher die Werte nach HF-Verstärker am R-Eingang des Mischer gemessen hat, mit den Werten nach dem NF-Verstärkers verglichen. Dafür werden die Werte in Tabelle \ref{tab:verluste} durch den Faktor 31,5 geteilt \cite{anleitung}, um die Spannung $U_\mathrm{I}$ vor den NF-Verstärkers zu erhalten. Danach wird angenommen, dass der Mischer ohne Konversionsverluste arbeitet, d.h. Eingang L und R haben keine Phasendifferenz, womit die Spannung am Ausgang I gleich der Spannung am Ausgang R ist, also $U_\mathrm{R} = U_\mathrm{I}$. Eine skizzenhafte Darstellung des Schaltplans zur Übersicht ist in Abbildung \ref{fig:schaltschema} gegeben.
 
 \begin{center}
     \captionsetup{type=figure}
-    \includegraphics[scale=0.2]{Bilder/Schaltschema.png}
+    \includegraphics[scale=0.18]{Bilder/Schaltschema.png}
     \captionof{figure}{Skizze von der Anordnung der elektronischen Bauteile und Größen}
     \label{fig:schaltschema}
 \end{center}
+
+Die Spannung $U_\mathrm{I}$ wird dann durch die Formel:
+\begin{gather}
+    P^*_\mathrm{I} = 10\cdot\log_{10}\left(\frac{U_\mathrm{I}^2}{2R}\right);~~[P^*] = 1\,\mathrm{dBm}
+\end{gather}
+in den gesuchten HF-Leistungswerte ohne Mischer $P_\mathrm{I}^*$ umgerechnet. \cite{anleitung} Beachte hierbei, dass der Widerstand $R=50\,\Omega$ ist und dass auf $P_\mathrm{I}^*$ 6\,dBm dazuaddiert wurde, um den Vergleich zwischen $P_\mathrm{S,Mess}^*$ zu gewährleisten. \cite{anleitung} Alle berechneten Werte kann man in Tabelle \ref{tab:konversionsverluste} finden. Der Vergleich zwischen $P^*_\mathrm{I}$ und $P^*_\mathrm{S,Mess}$ wurde grafisch in Abb. \ref{fig:specAnalVergleich} dargestellt, wobei der Fehler weggelassen wurde da dieser zu klein zum Auflösen ist. 
 
 Mittelung über die Ergebnisse ergibt dann:
 \begin{gather}
@@ -42,6 +38,13 @@ Um dann die konkreten Konversionsverluste zu ermitteln wird der Abstand zwischen
 \begin{gather}
     \boxed{v = (2 \pm 1)\,\mathrm{dBm}}~.
 \end{gather}
+
+\begin{center}
+    \captionsetup{type=figure}
+    \includegraphics[scale=0.4]{Bilder/Auswertung/62/Signal-Rausch.pdf}
+    \captionof{figure}{Vergleich zwischen Theorie und Praxis für gemessene Werte am Spektrumanalysator mit dem theoretischen Leistungswert des Rauschens \\$P^*_\mathrm{R,Theo}$ = -79\,dBm und des Signals $P^*_\mathrm{S,Theo}$= -30\,dBm, sowie gemessene Leistung mit Mischer $P^*_\mathrm{S,Mess}$ und ohne Mischer $P^* _\mathrm{I}$}
+    \label{fig:specAnalVergleich}
+\end{center}
 
 \begin{center}
     \captionsetup{type=table}
@@ -60,31 +63,29 @@ Um dann die konkreten Konversionsverluste zu ermitteln wird der Abstand zwischen
     \label{tab:konversionsverluste}
 \end{center}
 
-\newpage
-
 \subsection{Effektive Quantenausbeute}
 \label{sub:ausbeute}
 
-Im nächsten Abschnitt wird die Quantenausbeute $\beta_\mathrm{D}$ berechnet. Dafür wird Gleichung (\ref{eq:leistungPhotosignal}) aus Kapitel \ref{sec:signalRausch} verwendet und auf die Quantenausbeute $\beta_\mathrm{D}$ umgestellt wird:
+Im nächsten Abschnitt wird die Quantenausbeute $\beta_\mathrm{D}$ berechnet. Dafür wird Gleichung (\ref{eq:leistungPhotosignal}) aus Kapitel \ref{sec:signalRausch} verwendet und auf die Quantenausbeute $\beta_\mathrm{D}$ umgestellt:
 \begin{gather}
     P_\mathrm{S} = \frac{R}{2}\left(\frac{e\beta_\mathrm{D}}{2hc}\lambda P M \frac{\ln10}{2}\mathrm{OD}\right)^2
-    \quad \Leftrightarrow \quad \beta_\mathrm{D} = \underbrace{\sqrt{\frac{1}{\frac{R}{2}\left(\frac{e\beta_\mathrm{D}}{2hc}\lambda P\frac{\ln10}{2}\right)^2}}}_{C} \cdot \frac{\sqrt{P_\mathrm{S}}}{\mathrm{OD}\cdot M}
+    \quad \Leftrightarrow \quad \beta_\mathrm{D} = \underbrace{\sqrt{\frac{1}{\frac{R}{2}\left(\frac{e\beta_\mathrm{D}}{2hc}\lambda P\frac{\ln10}{2}\right)^2}}}_{C} \cdot \frac{\sqrt{P_\mathrm{S}}}{\mathrm{OD}\cdot M}~.
 \end{gather}
 Als Leistungswerte $P_\mathrm{S}$ werden die gemessenen Werte $P^*_\mathrm{S,Mess}$ aus Kapitel \ref{sub:specAnal} verwendet. Die optische Dichte OD ist in Kapitel \ref{sub:opDichte} als OD = 0,09 $\pm$ 0,07 gegeben. Weiterhin ist der Modulationsindex $M$ zu jeder Modulationsfrequenz $\omega_\mathrm{m}$ in Kapitel \ref{sec:mindex} zu finden. Für die Konstante $C$ gilt mit den Werten aus dem Skript \cite{anleitung} (auch in Kapitel \ref{sec:signalAbsorp} gegeben):
 \begin{gather}
     C= 6807\,\sqrt{\mathrm{W}}~.
 \end{gather}
-Zuerst müssen die Leistungswerte $P^*_\mathrm{S,Mess}$ in mW umgerechnet werden, dafür wird der Verstärkungsfaktor von 55\,dB von $P^*_\mathrm{S,Mess}$ subtrahiert und dann mit der Formel:
+Als Nächstes müssen die Leistungswerte $P^*_\mathrm{S,Mess}$ in mW umgerechnet werden, dafür wird der Verstärkungsfaktor von 55\,dB von $P^*_\mathrm{S,Mess}$ subtrahiert und dann mit der Formel:
 \begin{gather}
     P^* = 10\log_{10}(P) \qquad \Leftrightarrow \qquad P = 10^{P^*/10}
     \label{eq:dBmTomW}
 \end{gather}
 umgerechnet. \cite{anleitung} Dabei ist $P^*$ der Leistungspegel in dBm und $P$ der Leistungspegel in mW. 
-Tabelle \ref{tab:ausbeute} fasst nochmal alle Werte an einer Stelle zusammen, sowie die errechneten Werte für die Quantenausbeute $\beta_\mathrm{D}$. Messfehler wurden mit dem Fehlerfortpflanzungsgesetz berechnet. In Tabelle \ref{tab:ausbeute} lässt sich bei hohe Modulationsfrequenzen eine hohe Quantenausbeute $\beta_\mathrm{D}$ erkennen, aber auch einen sehr großen Messfehler aufgrund der deutlich höheren Leistungswerte. Dennoch lässt sich sagen, dass für niedrige Modulationsfrequenzen $\omega_\mathrm{m}$ die Quantenausbeute mit den Erwartungen übereinstimmt. Betrachtet man den Mittelwert der Quantenausbeute $\beta_\mathrm{D}$ erhält man als Ergebnis:
+Tabelle \ref{tab:ausbeute} fasst nochmal alle Werte an einer Stelle zusammen, sowie die errechneten Werte für die Quantenausbeute $\beta_\mathrm{D}$. Messfehler wurden mit dem Fehlerfortpflanzungsgesetz berechnet. In Tabelle \ref{tab:ausbeute} lässt sich bei hohe Modulationsfrequenzen eine hohe Quantenausbeute $\beta_\mathrm{D}$ erkennen, aber auch einen sehr großen Messfehler aufgrund der deutlich höheren Leistungswerte. Dennoch lässt sich sagen, dass für niedrige Modulationsfrequenzen $\omega_\mathrm{m}$ die Quantenausbeute mit den Erwartungen on 0,3 \cite{anleitung} übereinstimmt. Betrachtet man den Mittelwert der Quantenausbeute $\beta_\mathrm{D}$ erhält man als Ergebnis:
 \begin{gather}
-    \boxed{\beta_\mathrm{D} = 0,73 \pm 0,22}~,
+    \boxed{\beta_\mathrm{D} = 0,73 \pm 0,22}~.
 \end{gather}
-was ein Stück über den Erwartungen liegt, was aber auch mit einen systematischen Messfehler für Modulationsfrequenzen 400~1350\,MHz zu tun haben könnte.
+Das Ergebnis liegt ein Stück über den Erwartungen, was aber auch mit dem systematischen Messfehler für Modulationsfrequenzen von 400 $\sim$ 1350\,MHz zu tun haben könnte.
 Eine herkömmliche Silizium-Photodiode erreicht heutzutage eine Quantenausbeute von 80\,\%, wobei schon mit sogenannten schwarzen Silizium eine Quantenausbeute von 130\,\% gelungen ist. \cite{siPD} Dies lässt darauf schließen, dass die gemessenen Werte noch in der Erwartung der Realität liegen.
 \begin{center}
     \captionsetup{type=table}
@@ -103,19 +104,10 @@ Eine herkömmliche Silizium-Photodiode erreicht heutzutage eine Quantenausbeute 
     \label{tab:ausbeute}
 \end{center}
 
-
-
-
-
-
-
-
-
-
 \subsection{Minimale optische Dichte}
 \label{sub:minopDichte}
 
-Um die minimale optische Dichte $\mathrm{OD}_\mathrm{min}$ der Messaperatur zu erhalten wird die Gleichung des thermischen Rauschens $P_\mathrm{T}$ mit der Gleichung (\ref{eq:leistungPhotosignal}) für die Lichtleistung $P_\mathrm{S}$ gleichgesetzt, dabei ist OD dann die minimale optische Dichte $\mathrm{OD}_\mathrm{min}$. Dies Überlegung hat dann dieses Ergebnis zur Folge:
+Um die minimale optische Dichte $\mathrm{OD}_\mathrm{min}$ der Messaperatur zu erhalten wird die Gleichung des thermischen Rauschens $P_\mathrm{T}$ mit der Gleichung (\ref{eq:leistungPhotosignal}) für die Lichtleistung $P_\mathrm{S}$ gleichgesetzt, dabei ist OD dann die minimale optische Dichte $\mathrm{OD}_\mathrm{min}$. Diese Überlegung hat dann das folgende Ergebnis zur Folge:
 \begin{gather}
     P_\mathrm{T} = 4 k_\mathrm{B} T \Delta \nu = \frac{R}{2}\left(\frac{e\beta_\mathrm{D}}{2hc}\lambda P M \frac{\ln10}{2}\right)^2 \mathrm{OD}_\mathrm{min}  = P_\mathrm{S}~.
     \label{eq:signaleqrausch}
@@ -125,12 +117,10 @@ Wenn man sich in Gleichung (\ref{eq:signaleqrausch}) den Term vor der minimalen 
     \Rightarrow \qquad \boxed{\mathrm{OD}_\mathrm{min} = \sqrt{\frac{P_\mathrm{T}}{P_\mathrm{S}}} \cdot \mathrm{OD}}~,
     \label{eq:minopDichte}
 \end{gather}
-wobei $\mathrm{OD}$ die gemessene optische Dichte mit $0,09 \pm 0,07$ aus Kapitel \ref{sub:opDichte} ist. Als Leistungswerte $P_\mathrm{T}$ und $P_\mathrm{S}$ werden die berechneten Werte aus Kapitel \ref{sec:rauschen} ($P_\mathrm{R,Theo}$) und \ref{sec:signalAbsorp} ($P_\mathrm{S,Theo}$)  verwendet. Dabei wird aber der Wert von $P_\mathrm{R,Theo}$ durch 4 gerechnet \cite{anleitung}, da die Formel für $P_\mathrm{s,Theo}$ schon für die gemessenen Werte angepasst wurde. Die Fehler wieder mit dem Fehlerfortpflanzungsgesetz ermittelt und damit folgt für die minimale optische Dichte:
+wobei $\mathrm{OD}$ die gemessene optische Dichte mit $0,09 \pm 0,07$ aus Kapitel \ref{sub:opDichte} ist. Als Leistungswerte $P_\mathrm{T}$ und $P_\mathrm{S}$ werden die berechneten Werte aus Kapitel \ref{sec:rauschen} ($P_\mathrm{R,Theo}$) und \ref{sec:signalAbsorp} ($P_\mathrm{S,Theo}$)  verwendet. Dabei wird aber der Wert von $P_\mathrm{R,Theo}$ durch 4 gerechnet \cite{anleitung}, da die Formel für $P_\mathrm{S,Theo}$ schon für die gemessenen Werte angepasst wurde. Die Fehler wurde wieder mit dem Fehlerfortpflanzungsgesetz ermittelt und damit folgt für die minimale optische Dichte:
 \begin{gather}
     \boxed{\mathrm{OD}_\mathrm{min} = (3,25 \pm 2,53) \cdot 10^{-4}}~.
 \end{gather}
-
-5 10e-4 3,16 e10-9
 
 %\begin{center}
 %    \captionsetup{type=table}
