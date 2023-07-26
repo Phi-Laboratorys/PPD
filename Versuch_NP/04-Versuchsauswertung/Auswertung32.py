@@ -186,6 +186,9 @@ keys = [keys_seventy, keys_ninety]
 
 title = ["Unpolarisiert", r"Polarisiert $\alpha = 0^\circ$", r"Polarisiert $\alpha = 90^\circ$"]
 
+lambda_max_zeroPol = [[],[]]
+s_lambda_max_zeroPol = [[],[]]
+
 plot.parameters(True, 30, (16,8), 100, colorblind = False)
 
 fig, ax = plt.subplots(2,3, figsize = (24,16), sharex=True, sharey=True)
@@ -194,7 +197,7 @@ i = 0
 for key_length in keys:
     j = 0
     for data, tit in zip(df, title):
-        print(tit)
+        #print(tit)
         for key in key_length:
             
             x = data["lambda[nm]"]
@@ -207,7 +210,7 @@ for key_length in keys:
     
             popt, pcov = curve_fit(gaussian, x, y, [mean, 1, amp])
     
-            print(str(popt[0].round(2)) + " $\pm$ " + str(np.sqrt(np.diag(pcov))[0].round(2)))
+            #print(str(popt[0].round(2)) + " $\pm$ " + str(np.sqrt(np.diag(pcov))[0].round(2)))
             
             label_split = key.replace("[","_").split("_")
             ax[i][j].plot(x, y, label = label_split[1] + r"$\times$" + label_split[2])
@@ -215,6 +218,10 @@ for key_length in keys:
             
             ax[i][j].set_xlim(min(x),max(x))
             #ax[i][j].set_ylim(1,3.3)
+            
+            if j == 1:
+                lambda_max_zeroPol[i].append(popt[0].round(2))
+                s_lambda_max_zeroPol[i].append(np.sqrt(np.diag(pcov))[0].round(2))
             
             if i == 0:
                 ax[i][j].set_title(tit, x = 0.5, y = 1.05)
@@ -236,3 +243,43 @@ ax[1][1].set_xlabel(r"$\lambda$ [nm]")
 plt.subplots_adjust(hspace=0.1, wspace=0.1)
         
 plt.savefig(pic_folder + "/" + "Spektren_Fit_Gruppe2.pdf")
+
+# LINEAR ======================================================================
+
+def linear(x, m, t):
+    return m*x + t
+
+x = np.arange(70, 140 + 10, 10)
+y = lambda_max_zeroPol
+s_y = s_lambda_max_zeroPol
+
+width = [r"70", r"90"]
+
+fig, ax = plt.subplots(1,1, figsize = (10,8))
+
+for y, s_y, w in zip(lambda_max_zeroPol, s_lambda_max_zeroPol, width):
+
+    if w == r"70":
+        popt, pcov = curve_fit(linear, x[3:-2], y[3:-2])
+    else:
+        popt, pcov = curve_fit(linear, x[0:-2], y[0:-2])
+    
+    print(*popt, np.sqrt(np.diag(pcov)))
+    
+    xline = np.linspace(min(x), max(x) + 1, 100)
+    
+    ax.scatter(x, y, label = r"$B = " + w + r"$\,nm", marker = 'o', s = 100)
+    ax.plot(xline, linear(xline, *popt), label = r"Fit " + w + r"\,nm", linewidth = 3)
+
+ax.set_xlim(min(x), max(x))
+ax.set_ylim(600, 800)
+
+ax.set_xticks(x)
+
+ax.set_xlabel(r"$L$ [nm]")
+ax.set_ylabel(r"$\tilde{\lambda}^\mathrm{\alpha = 0^\circ}_B$ [nm]")
+ax.yaxis.set_label_coords(- 0.12, 0.5)
+
+ax.legend(loc = "upper center", ncol = 4, bbox_to_anchor = (0.5, 1.2), frameon = False, handlelength = 0.5, columnspacing=1)
+
+plt.savefig(pic_folder + "/" + "Wavelength_Fit_Gruppe2.pdf", bbox_inches = "tight")
