@@ -131,7 +131,7 @@ df_eval = df_eval.drop_duplicates()
 df_eval.to_csv(data_folder + "/" + "eval.csv", index=False)
 #'''
 
-'''
+#'''
 # Concentration ===============================================================
 
 df = pd.read_csv(data_folder + "/" + "eval.csv")
@@ -139,32 +139,32 @@ df = df.drop([1,2,3,7,8])
 
 x_s, x_e, h = 0, 0.24, 0.08
 x = np.arange(x_s, x_e + h, h)
-xline = np.linspace(x_s, x_e, 100)
+xline = np.linspace(-0.02, 0.25, 100)
 y, s_y = df["k[ms-1]"], df["s_k[ms-1]"]
 
 popt, pcov = curve_fit(linear, x, y)
 
 print(popt[0].round(2), np.sqrt(np.diag(pcov))[0].round(2))
 
-plot.parameters(True, 30, (14,8), 100, colorblind = False)
+plot.parameters(True, 30, (14,6), 100, colorblind = False)
 
 fig, ax = plt.subplots(1,1)
 
 ax.errorbar(x, y, s_y, linestyle = "", capsize=5, marker = "o", label="Data")
 ax.plot(xline, linear(xline, *popt), linewidth = 3, label="Linear Fit")
 
-ax.set_xlim(0, 0.25)
-ax.set_ylim(1050, 1450)
+ax.set_xlim(-0.02, 0.25)
+ax.set_ylim(1050, 1550)
 
 ax.set_xlabel(r"$c(C_{70})$ [mM]")
-ax.xaxis.set_label_coords(0.5, -0.12)
+ax.xaxis.set_label_coords(0.5, -0.15)
 
 ax.set_ylabel(r"$k$ [ms$^{-1}$")
 ax.yaxis.set_label_coords(- 0.1, 0.5)
 
-ax.set_yticks(np.arange(1100, 1450, 100))
+ax.set_yticks(np.arange(1100, 1550, 100))
 
-ax.legend(loc = "upper center", bbox_to_anchor = (0.5, 1.15), frameon=False, ncol=2)
+ax.legend(loc = "upper center", bbox_to_anchor = (0.5, 1.2), frameon=False, ncol=2)
 
 plt.savefig(pic_folder + "/" + "Concentration.pdf", bbox_inches = "tight")
 
@@ -190,7 +190,7 @@ for f, l in zip(data_files, labels):
         
     x, y = df[df.keys()[0]], df[df.keys()[1]]
     
-    ax.plot(x, y, linewidth = 3, label=l)
+    ax.plot(x, y, linewidth = 4, label=l)
 
     ax.set_xlim(-200, 500)
     ax.set_ylim(-2, 40)
@@ -208,8 +208,8 @@ plt.savefig(pic_folder + "/" + "Pump-Laser.pdf", bbox_inches = "tight")
 
 #'''
 
-#'''
-# PUMP LASER ==================================================================
+'''
+# DIFFERNECE ==================================================================
 
 data_folder = data_folder
 
