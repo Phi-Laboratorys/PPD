@@ -159,7 +159,7 @@ ax.set_ylim(1050, 1550)
 ax.set_xlabel(r"$c(C_{70})$ [mM]")
 ax.xaxis.set_label_coords(0.5, -0.15)
 
-ax.set_ylabel(r"$k$ [ms$^{-1}$")
+ax.set_ylabel(r"$k$ [ms$^{-1}$]")
 ax.yaxis.set_label_coords(- 0.1, 0.5)
 
 ax.set_yticks(np.arange(1100, 1550, 100))
