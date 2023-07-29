@@ -156,10 +156,10 @@ ax.plot(xline, linear(xline, *popt), linewidth = 3, label="Linear Fit")
 ax.set_xlim(-0.02, 0.25)
 ax.set_ylim(1050, 1550)
 
-ax.set_xlabel(r"$c(C_{70})$ [mM]")
+ax.set_xlabel(r"$C_\mathrm{q}$ [mM]")
 ax.xaxis.set_label_coords(0.5, -0.15)
 
-ax.set_ylabel(r"$k$ [ms$^{-1}$]")
+ax.set_ylabel(r"$k_\mathrm{app}$ [ms$^{-1}$]")
 ax.yaxis.set_label_coords(- 0.1, 0.5)
 
 ax.set_yticks(np.arange(1100, 1550, 100))
