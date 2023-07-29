@@ -17,7 +17,7 @@
 \usepackage{amsmath,amssymb,amstext}
 \usepackage{siunitx}
 \usepackage{url}
-\usepackage{natbib}
+\usepackage[numbers, super]{natbib}
 \usepackage{microtype}
 \usepackage[format=hang]{caption}
 \usepackage{physics}
@@ -36,6 +36,7 @@
 \usepackage[hidelinks]{hyperref}                      % Links in document
 \usepackage{makecell}                      % New line in tables
 \usepackage{rotating}
+\usepackage{booktabs}
 
 % Paragraph changes
 \parindent 0.0cm
@@ -62,9 +63,6 @@
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 \newcommand{\vect}[1]{\boldsymbol{\mathbf{#1}}}
 \newcolumntype{g}{>{\columncolor[rgb]{ .741,  .843,  .933}}l}
-% Index not kursive
-\catcode`_=\active
-\newcommand_[1]{\ensuremath{\sb{\mathrm{#1}}}}
 
 \begin{document}
 
