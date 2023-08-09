@@ -117,6 +117,9 @@ df_ninetyPol.to_csv(data_folder + "/" + "data_90_Pol.csv", index=False)
 #'''
 
 '''
+
+# data_folder = "../Daten/3.2"
+
 df_woPol     = pd.read_csv(data_folder + "/" + "data_wo_Pol.csv")
 df_zeroPol   = pd.read_csv(data_folder + "/" + "data_0_Pol.csv")
 df_ninetyPol = pd.read_csv(data_folder + "/" + "data_90_Pol.csv")
@@ -138,8 +141,12 @@ for key_length in keys:
         for key in key_length:
             
             x = data["lambda[nm]"]
-            # y = (data[key])/(data["I_Ref_Mean[au]"])
-            y = (data[key])/(data["I_Ref[au]"])
+            #y = (data[key])/(data["I_Ref_Mean[au]"])
+            # y = (data[key])/(data["I_Ref[au]"])
+            y = (data[key] - data["I_Dunkel[au]"])/(data["I_Ref_Mean[au]"] - data["I_Dunkel[au]"])
+            
+            # y = data[key]
+            
             #y = data[key] - data["I_Ref_Mean[au]"]
             #y = (data[key])/(data["I_Ref_Mean[au]"]) - data["I_Dunkel[au]"]/(data["I_Ref_Mean[au]"])
             
@@ -167,8 +174,35 @@ ax[1][1].set_xlabel(r"$\lambda$ [nm]")
 
 plt.subplots_adjust(hspace=0.1, wspace=0.1)
 # plt.savefig(pic_folder + "/" + "Spektren.pdf", bbox_inches = "tight")
-plt.savefig(pic_folder + "/" + "Spektren_Gruppe2.pdf", bbox_inches = "tight")
+# plt.savefig(pic_folder + "/" + "Spektren_Gruppe2.pdf", bbox_inches = "tight")
+# plt.savefig(pic_folder + "/" + "Spektren_Gruppe2_wDunkel.pdf", bbox_inches = "tight")
+# plt.savefig(pic_folder + "/" + "Spektren_wDunkel.pdf", bbox_inches = "tight")
 #'''
+
+#'''
+# DUNKEL/REF ==================================================================
+
+data_folder = "../Daten/3.2"
+df_woPol = pd.read_csv(data_folder + "/" + "data_wo_Pol.csv")
+
+plot.parameters(True, 30, (16,8), 100, colorblind = False)
+
+fig, ax = plt.subplots(1,1, figsize = (8,8))
+
+x, y = df_woPol["lambda[nm]"], df_woPol["I_Dunkel[au]"]
+ax.plot(x,y)
+
+ax.set_ylabel(r"$I_\mathrm{D}$ [a.u.]")
+ax.yaxis.set_label_coords(-0.15, 0.5)
+
+ax.set_xlabel(r"$\lambda$ [nm]")
+
+plt.savefig(pic_folder + "/" + "Spektren_Dunkel.pdf", bbox_inches = "tight")
+
+#'''
+
+
+'''
 
 # GAUSSIAN ====================================================================
 
@@ -243,6 +277,9 @@ ax[1][1].set_xlabel(r"$\lambda$ [nm]")
 plt.subplots_adjust(hspace=0.1, wspace=0.1)
         
 plt.savefig(pic_folder + "/" + "Spektren_Fit_Gruppe2.pdf")
+#'''
+
+'''
 
 # LINEAR ======================================================================
 
@@ -283,3 +320,5 @@ ax.yaxis.set_label_coords(- 0.12, 0.5)
 ax.legend(loc = "upper center", ncol = 4, bbox_to_anchor = (0.5, 1.2), frameon = False, handlelength = 0.5, columnspacing=1)
 
 plt.savefig(pic_folder + "/" + "Wavelength_Fit_Gruppe2.pdf", bbox_inches = "tight")
+
+#'''
