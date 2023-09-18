@@ -4,13 +4,15 @@
 
 \subsection*{Structural Analysis}
 
-The following plot shows the obtained intensity distribution.
+The following section, we are going to examine the structure of NaCl, the plot shows the obtained intensity distribution.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{Pictures/Evaluation/42/IntDistNaCl.pdf}
     \caption{Intensity distribution of the NaCl experiment.}
 \end{figure}
+
+The following table shows the intensity, the full width at half maximum (FWHM) and the positions of each peak.
 
 \begin{table}[ht]
     \centering
@@ -32,8 +34,34 @@ The following plot shows the obtained intensity distribution.
     \label{tab:fitVals}
 \end{table}
 
+Using the following realtions:
 
-\begin{table}
+Bragg condition: 
+\begin{align}
+    2d sin(\Theta) = m \lambda
+\end{align}
+
+Distance between to planes in a cubic system:
+\begin{align}
+    d = \frac{a^2}{h^2+k^2+l^2}
+\end{align}
+with the laue indices $h, h, l$ and the lattice parameter $a$.
+
+In the following we assume $m=1$.
+So we can derive the following equation:
+\begin{align}
+    sin^2(\Theta) = (h^2+k^2+l^2)\frac{\lambda^2}{4a^2}
+\end{align}
+We define the constant: $c^{-1} = \frac{\lambda^2}{4a^2}$, which depends only on the setup.
+
+We can write an equation to compute $a$:
+\begin{align}
+    a=\sqrt{c}\frac{\lambda}{2}
+\end{align}
+
+Using this relations and the date from table \ref{tab:fitVals} we get the values displayed in the following table (table \ref{tab:latticeParams}):
+
+\begin{table}[h]
     \centering
     \begin{tabular}{c | c c c c c c c}
         \hline
@@ -52,3 +80,5 @@ The following plot shows the obtained intensity distribution.
     \caption{Lattice parameters and indices for each peak fitted.}
     \label{tab:latticeParams}
  \end{table}
+
+ On average, the lattice parameter is $ a = 5.674$. This fizs pretty well with the literature value os $a=5.64$ (Wikipedia).
