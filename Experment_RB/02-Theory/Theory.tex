@@ -3,3 +3,157 @@
 
 \section{X-Rays}
 
+\subsection{General}
+X-rays are electromagnetic radiation (EM radiation), which is located between UV and $\gamma$-rays.
+radiation and $\gamma$-radiation. The typical wavelength range for
+X-rays ranges from $100\,\text{\AA}$ to about 0.05 $\text{\AA}$.
+
+\subsection{Generation using an X-ray tube}
+
+The X-ray tube consists of a heated cathode and a beveled anode. Electrons emitted from the
+cathode are accelerated to the anode by a high voltage.
+There they strike and generate X-rays.
+The emission spectrum of one of these tubes consists of two parts. The first part is the
+characteristic radiation, which is characteristic for the used anode material and 
+appear as spectral lines. The second part is the bremsstrahlung, which forms a continuous
+background. It is independent of the chosen anode material and is characterized by a
+short-wave limit. Bremsstrahlung is produced by the deceleration of electrons entering the anode.
+Since electrons enter at all velocities, all wavelengths are produced (continuum).
+The wavelength of the lower boundary can be calculated by the law of Duane and Hunt
+law.
+The characteristic radiation arises, by the penetration of the electron into the anode.
+There by this, a bound electron is separated from its atom and this free
+place is occupied again by a higher electron. The higher electron gives
+its excess energy in the form of characteristic EM radiation.
+
+\subsection{Generation using an synchrotron}
+
+In a synchrotron, electrons are forced into circular orbits by magnetic fields
+and accelerated there by alternating electric fields. Due to the circular motion
+the electrons experience a centrifugal acceleration which leads to a loss of energy in the form of
+EM radiation, or synchrotron radiation ( tangential to the direction of motion).
+At electron velocities close to the speed of light, the radiated energy is in the
+range of the X-ray spectrum.
+
+In a wiggler/undulator, this phenomenon is used to generate synchrotron radiation.
+This consists of a series of dipole magnets, which direct
+electron beam with almost the speed of light alternately upwards and downwards. By the centrifugal forces, which prevail during the change of direction, synchrotron radiation is generated.
+The difference between wiggler and undulator is that the
+wiggler generates a continuous spectrum and the undulator a line spectrum. This
+is achieved by a different design.
+
+\section{Interaction of X-rays and matter}
+X-rays can be absorbed/shielded by matter. This provides the basis
+for X-ray absorption spectroscopy.
+Crystalline matter or smaller structures can diffract/scatter X-rays. This
+is the basis for structural analysis, with which the spatial arrangement of atoms in the crystal can be
+can be investigated.
+
+In medicine, X-rays are used for diagnostics (e.g., bone fractures) or for the
+treatment of special diseases (irradiation of cancer). In technology
+X-rays are used in material testing and quality assurance.
+For science, X-rays are indispensable for investigating the smallest structures.
+
+\section{Absorption}
+
+\subsection{Absorption law}
+The reduction of the radiant power $P(x)$ of the X-rays during absorption can be described as follows:
+\begin{align}
+    P(x) = P_0 e^{-\mu x}
+\end{align}
+Here $P_0$ is the radiant power before absorption, $x$ is the penetration depth and $\mu = \mu_S + \alpha$ the
+Attenuation coefficient consists of the scattering coefficient $\mu_S$ and the absorption coefficient
+$\alpha$.
+
+\subsection{Absorption edges}
+In the course of the absorption cross-section as a function of the wavelength, jumps are found.
+These jumps are called absorption edges and are characteristic for the
+absorption material. The corresponding energies coincide with the ionization energies of the
+corresponding inner levels.
+As the wavelength of the X-rays increases, electrons can be ionized from deeper and deeper shellscan be ionized, which leads to an increase in the absorption cross-section. This increases
+until the ionization limit of the current shell is reached. After that electrons of the next deeper shell can be ionized. But there at first only electrons
+in the uppermost level can be ionized, which leads to a jump in the absorption cross-section.
+
+\section{Crystals}
+A crystal is a solid with a regular arrangement of atoms/molecules. Crystals are very widespread. They are found in salts, minerals and metals. Crystals, or crystalline material is found in the body in the form of minerals, sugars and proteins.
+
+\subsection{Crystal structure}
+By crystal structure is meant the totality of the translational lattice and the atomic base. It is useful to know the structure of the material, because it is important for its properties and
+behavior.
+
+\subsection{Symmetrie}
+Symmetry refers to the invariance of an object with respect to certain operations. This means that an object is subjected to a certain operation (e.g. rotation around its own axis) and it has the same properties as before, i.e. it has not changed and is different from the original state.
+
+\subsection{cubic lattice}
+Cubic symmetry is the lattice symmetry of a cubic lattice, this has the highest symmetry of all lattices since it is invariant under all symmetries. By cubic lattice is meant a Bravis lattice class which has the same distances and angles between the outer atoms of a lattice cell.
+
+\subsection{unit cell}
+The atoms always sit on the vertices of the unit cell (primitive). Additionally, in a cubic or orthorombic system, they may be centered on the outer surfaces
+(face centered) or centered in the cell (space centered). In orthorombic or monoclinic systems, it is possible that one atom each is still centered on the lower and upper outer surface (base-centered).
+
+\section{Diffraction of X-rays}
+Diffraction is a typical processing phenomenon of waves. These waves deviate after a lateral boundary of the wave field from a straight-line propagation and are deflected. deflected. The reason for this is Huygens' principle that every point of a wave front is the starting point for a new elementary wave. starting point for a new elementary wave.
+
+\subsection{Laue condition}
+Laue puts the condition that at diffraction one gets constructive interference only if the change of the wave vector at the scattering process corresponds to a reciprocal lattice vector. Thus one receives the direction of the observed diffraction-reflections at a pure crystal-lattice (without impurities).
+
+The distance between two scattering centers is the lattice vector $\vec{R}$. The wave vector of the (scattered) radiation is $(\vec{k}')\vec{k}$. For the path difference it follows:
+\begin{align}
+    \Delta x = \vec{R}\cdot\left(\frac{\vec{k}}{k}-\frac{\vec{k}'}{k'}\right)
+\end{align}
+For constructive interference the following has to be true:
+\begin{align}
+    \Delta x = m\cdot\lambda\:\:m\in\mathbb{Z}
+\end{align}
+In elastic scattering, the wavenumber of the incident and reflected beam is equal:
+\begin{align}
+    k=k'=\frac{2\pi}{\lambda}
+\end{align}
+It follows:
+\begin{align}
+    \vec{R}\cdot\left(\vec{k}-\vec{k}'\right)=2\pi m\:\:\text{bzw.}\:\:\exp\left[i\vec{R}\cdot\left(\vec{k}-\vec{k}'\right)\right] = 1
+\end{align}
+The second equation corresponds to the equation of determination of the reciprocal lattice vectors $\vec{K}$:
+\begin{align}
+    \exp\left[i\vec{R}\cdot\vec{K}\right]=1
+\end{align}
+Thus the Laue condition follows:
+\begin{align}
+    \vec{K}=\vec{k}-\vec{k}'
+\end{align}
+
+\subsection{Bragg condition}
+If X-rays hit a crystal, a large part will pass through it unhindered, but a small part will be deflected at the atoms. These deflections are very weak and become stronger when they constructively interfere according to the Bragg condition. Bragg's equation represents the constructive interference between two planes and is reads:
+\begin{align}
+    n\lambda=2d\sin\left(\theta\right)
+\end{align}
+Where n is a natural number (diffraction order), $\lambda$ is the wavelength of the X-rays, d the distance between two parallel grating planes, and $\theta$ the angle between the X-ray beam
+and the grating plane.
+
+\section{Centered grid}
+In a centered lattice, in contrast to the primitive lattice which has only lattice points at the corners, there are additional points in the unit cell. One distinguishes between space-centered lattice, where there is another lattice point in the middle of the unit cell. Thus, there are a total of two atoms in the cell. The lattice vectors of the bcc-lattice (base-centered-cubic) are: $\vec{a}=\frac{a}{2}\left(-1,1,1\right)\:\:\vec{b}=\frac{a}{2}\left(1,-1,1\right)\:\:\vec{c}=\frac{a}{2}\left(1,1,-1\right)$. 
+
+Another centered lattice is the face-centered lattice, where there is another atom in the center of each side face. Thus there are 4 atoms in the unit cell. The lattice vectors of the fcc lattice (face-centered-cubic) are: $\vec{a}=\frac{a}{2}\left(0,1,1\right)\:\:\vec{b}=\frac{a}{2}\left(1,0,1\right)\:\:\vec{c}=\frac{a}{2}\left(1,1,0\right)$
+
+The last centered lattice is the base centered lattice, which has one atom in the center of the top and bottom side. There are a total of 2 atoms in the unit cell. The lattice vectors of the base centered orthorombic lattice are: $\vec{a}=\left(0,0,c\right)\:\:\vec{b}=\left(\frac{a}{2},\frac{b}{2},0\right)\:\:\vec{c}=\left(-\frac{a}{2},\frac{b}{2},0\right)$
+
+The centered Bravis grating causes destructive interference of the additional atom. This occurs when, of the Miller/Laue indices hkl, the sum of h and k is odd.
+
+\section{Powder Diffraction Chart}
+A peak in the powder diffractogram can be identified by its
+shape (profile), its position ($2\theta$), and its area
+(intensity).
+From the peak positions ($2\theta$), the lattice plane spacing of the crystal can be determined.
+The intensities can be used to determine the arrangement of the atoms on a lattice plane (thus the Bravis lattice) can be determined.
+
+\subsection{Atomic form factor and structure factor}
+The atomic shape factor is a measure of the angular dependence of the intensity of the scattered radiation. It reflects the number of electrons involved in the scattering under a certain angle. The structure factor now includes the interaction of all atoms in the unit cell and reflects the total diffraction at the lattice.
+
+\subsection{Intensity calculation}
+The (theoretical) intensity is proportional to the square of the amount of the structure factor of the reflection. The proportionality factor includes the original intensity $I_0$, the wavelengths of the primary beam $\lambda$ and correction factors. The absorption factor takes into account that a part of the X-rays is absorbed and thus not diffracted. The Lorentz factor takes into account that in moving crystals, reflections with higher diffraction angles remain in the reflection position longer than those with lower angles. Due to the movement apparently the intensity of the higher diffraction angles increases. The polarization factor takes into account that the amplitude of the scattered radiation is proportional to the sine of the angle between the orientation of the electric vector of the incident and scattered radiation. This is important for unpolarized X-rays. The extinction factor accounts for the fact that as the penetration depth increases, the radiation is attenuated by Bragg scattering. The area frequency factor takes into account the exaggeration of the intensity of a reflection, since several mesh plane arrays with the same Mitterian indices are simultaneously in the reflection position. 
+
+\subsection{Temperature factor}
+The temperature factor takes into account the increase in the deflections of the oscillations of the atoms about their equilibrium position with increasing temperature. The increase of the oscillations leads to a decrease of the scattering force and the intensities of the reflections.
+
+\subsection{ Background in a Powder diffractogram}
+The background comes from extraneous wavelength components of the monochromatic X-rays. Foreign bodies in the beam path or the sample are also part of the background. At smaller angles, even small deviations in the wavelength can cause reflections to occur further than at larger angles.
