@@ -1,0 +1,17 @@
+NaCl Files:
+http://www.crystallography.net/cod/result.php
+
+GSAS-II Video
+https://anl.app.box.com/v/Combinedrefinement
+
+https://subversion.xray.aps.anl.gov/pyGSAS/trunk/help/Tutorials.html
+
+Vesta Software:
+https://jp-minerals.org/vesta/en/download.html
+
+Jana2006 Video:
+https://www.youtube.com/watch?v=Y5mJhYs2HoY
+
+Jana2006 Software:
+http://jana.fzu.cz
+http://jana.fzu.cz/workshops/Jana2006%20Cookbook.pdf

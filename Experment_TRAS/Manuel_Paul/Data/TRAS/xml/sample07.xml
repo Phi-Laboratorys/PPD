@@ -1,0 +1,59 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>20.0.1f1</Version>
+<Cluster>
+<Name>SettingsFile</Name>
+<NumElts>12</NumElts>
+<String>
+<Name>Measurement starting time</Name>
+<Val>2023-06-05 16-37-58</Val>
+</String>
+<DBL>
+<Name>Probing Frequency [Hz]</Name>
+<Val>2000.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Delay Probe to Acquisition [ns]</Name>
+<Val>400.00000000000000</Val>
+</DBL>
+<I32>
+<Name>Number of Samples per Acquisition</Name>
+<Val>20000</Val>
+</I32>
+<DBL>
+<Name>Acquisition Sample Rate [Hz]</Name>
+<Val>499999.99999999999900</Val>
+</DBL>
+<DBL>
+<Name>Acquisition Delay Step Size [ns]</Name>
+<Val>10.00000000000000</Val>
+</DBL>
+<DBL>
+<Name>Peak Finder Threshold [V]</Name>
+<Val>0.50000000000000</Val>
+</DBL>
+<String>
+<Name>Baseline Correction</Name>
+<Val>TRUE</Val>
+</String>
+<I32>
+<Name>Number of Average Cycles</Name>
+<Val>5</Val>
+</I32>
+<String>
+<Name>Measurement Notes</Name>
+<Val>Sample: 
+Pulse widths: 
+Detector gain: 
+Other: </Val>
+</String>
+<Path>
+<Name>Original path of measurement file</Name>
+<Val>C:\Users\Labor Alex\Desktop\TRAS_data\PPD\group2_TRAS\sample7.csv</Val>
+</Path>
+<U32>
+<Name>deviceSerialNumber</Name>
+<Val>33706980</Val>
+</U32>
+</Cluster>
+</LVData>

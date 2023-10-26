@@ -19,9 +19,11 @@ __pycache__
 *.cb
 *.cb2
 *.lb
-Versuch_*.pdf
-Experiment_*.pdf
+#Versuch_*.pdf
+#Experiment_*.pdf
 .DS_Store
+Paper
+Literature
 
 ## Intermediate documents:
 *.dvi
